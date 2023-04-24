@@ -1,10 +1,11 @@
 /*상단 메뉴바*/
 header {
-  background-color: rgb(231, 217, 200);
+  background-color: #f3ecde;
   position: fixed;
 }
 .menu {
-  padding: 10px 300px 10px 300px;
+  padding-inline: 30%;
+  width: 1000px;
 }
 .menu_img {
   padding: 20px;
@@ -26,10 +27,6 @@ li {
   color: rgb(110, 104, 104);
   font-size: 11px;
 }
-.menu_login a:not(:last-child)::after {
-  content: "|"; /*글자 사이 줄*/
-  margin-left: 5px;
-}
 
 /*메뉴바 두번쨰줄*/
 
@@ -45,30 +42,52 @@ li {
   padding: 10px;
   display: inline-block;
   cursor: pointer;
+  font-size: 15px;
 }
 .coffee:hover {
   color: green;
-  background-color: black;
+  background-color: rgb(55, 51, 51);
+  border-radius: 10px 10px 0 0;
 }
 
 /* 마우스 올릴때 나타날 메뉴창 */
 .menu_bar .type {
   display: inline-block;
+  font-display: inherit;
   padding: 20px;
+  margin: 20px;
 }
 
-.tip {
-  background-image: url("media/main_menu_pattern.jpg");
-}
 .coffee_menu {
   position: absolute;
-  width: 100%;
-  background-color: black;
+  background-color: rgb(55, 51, 51);
   color: white;
   display: none;
 }
 
 .coffee:hover + .coffee_menu {
   display: block;
+}
+
+/*tip 설명*/
+
+.sub {
+  color: green;
+  padding: 10px;
+  padding-left: 0;
+}
+
+.tip {
+  background-image: url("media/main_menu_pattern.jpg");
+  padding: 10px;
+}
+
+.tip-main {
+  padding: 10px;
+}
+
+/*section*/
+section img {
   width: 100%;
+  height: 10;
 }
