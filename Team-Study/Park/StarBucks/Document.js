@@ -1,20 +1,21 @@
 /*1번*/
 
 const img = document.createElement("img");
-img.setAttribute("src", "media/Serch.png");
+img.setAttribute("src", "images/Serch.png");
 
 const container = document.querySelector(".container");
+console.log(container);
 container.append(img);
 
 /*2번*/
 const boxElements = document.querySelectorAll(".box p");
 
 boxElements.forEach((names) => {
-  names.setAttribute("font-size", "24x");
+  names.setAttribute("style", "font-size :24px");
 });
 
 /*3번*/
-const answer = document.querySelector(".box .answer");
-if (answer) {
-  answer.textContent = "네 잘하고있습니다.";
-}
+boxElements.forEach((names) => {
+  if (names.getAttribute("class") == "answer")
+    names.textContent = "네 잘하고있습니다.";
+});
