@@ -44,10 +44,6 @@ ul {
   color: rgb(110, 104, 104);
   font-size: 11px;
 }
-.menu_login a:not(:last-child)::after {
-  content: "|"; /*글자 사이 줄*/
-  margin-left: 5px;
-}
 
 /*메뉴바 두번쨰줄*/
 
@@ -63,6 +59,7 @@ ul {
   padding: 10px;
   display: inline-block;
   cursor: pointer;
+  font-size: 15px;
 }
 .coffee:hover {
   color: green;
@@ -94,6 +91,7 @@ ul {
 /* 마우스 올릴때 나타날 메뉴창 */
 .menu_bar .type {
   padding: 20px;
+  margin: 20px;
 }
 
 .tip {
