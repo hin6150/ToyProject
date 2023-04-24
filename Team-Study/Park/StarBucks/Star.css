@@ -1,18 +1,36 @@
+/* common style
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+} */
+
 /*상단 메뉴바*/
 header {
+  width: 100%;
   background-color: rgb(231, 217, 200);
   position: fixed;
 }
+/* Padding 대신, 가로길이를 줘 최대 길이 설정, margin을 auto로 줘 자연스럽게 가운데 정렬 */
 .menu {
-  padding: 10px 300px 10px 300px;
+  width: 1100px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
 }
 .menu_img {
+  position: absolute;
   padding: 20px;
 }
 
 /*리스트*/
 li {
   list-style: none;
+}
+
+ul {
+  padding-left: 0;
+  margin-left: 0;
 }
 
 /*로그인 상단*/
@@ -48,27 +66,42 @@ li {
 }
 .coffee:hover {
   color: green;
-  background-color: black;
+  background-color: #333;
 }
 
-/* 마우스 올릴때 나타날 메뉴창 */
-.menu_bar .type {
-  display: inline-block;
-  padding: 20px;
-}
-
-.tip {
-  background-image: url("media/main_menu_pattern.jpg");
-}
 .coffee_menu {
-  position: absolute;
-  width: 100%;
-  background-color: black;
+  top: 100px;
+  right: 0;
+  margin: 0 auto;
+  background-color: #333;
   color: white;
   display: none;
 }
 
+.coffee_menu .inner {
+  display: flex;
+  width: 1100px;
+  margin: 0 auto;
+}
+
 .coffee:hover + .coffee_menu {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
   width: 100%;
+}
+
+/* 마우스 올릴때 나타날 메뉴창 */
+.menu_bar .type {
+  padding: 20px;
+}
+
+.tip {
+  width: 100%;
+  background-image: url("./images/main_menu_pattern.jpg");
+}
+.tip .inner {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
