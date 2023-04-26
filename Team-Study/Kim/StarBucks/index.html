@@ -4,169 +4,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>스타벅스 과제</title>
-    <style>
-      body{
-        margin :0%;
-      }
-      .box {
-        background-color: rgb(250, 248, 248);
-        margin:auto 0;
-        padding-top: 20px;
-        padding-left: 210px;
-        padding-right:210px;
-        height: 100px;
-        position: relative;
-      }
-      .box1 {
-        float: right;
-        display: inline;
-      }
-      .b1{
-        position: absolute;
-        top: 70px;
-        right: 880px;
-      }
-      .b2{
-        position: absolute;
-        top: 70px;
-        right: 800px;
-      }
-      .b3{
-        position: absolute;
-        top: 70px;
-        right: 710px;
-      }
-      .b4{
-        position: absolute;
-        top: 70px;
-        right: 560px;
-      }
-      .b5{
-        position: absolute;
-        top: 70px;
-        right: 340px;
-      }
-      .b6{
-        position: absolute;
-        top: 70px;
-        right: 0%;
-        padding-right:210px;
-      }
-      .topw{
-        color:black;
-        opacity: 0.8;
-        display: inline;
-      }
-      .topw:hover{
-        opacity: 1;
-      }
-      a {
-        text-decoration: none;
-        display: inline;
-      }
-      input{
-        border-radius: 5px;
-        border: 1px solid rgb(99, 184, 86);
-        font-size: 12px;
-        height: 30px;
-        width: 175px;
-      }
-      input:focus {
-        outline: none;
-      }
-      p{
-        display: inline;
-        font-size: 12px;
-        opacity: 0.1;
-        font-weight: 800;
-      }
-      .info {
-        display: none; /* gpt */
-        color: white;
-        background-color: black;
-      }
-      .info:hover{
-        background-color: black;
-      }
+    <link rel="stylesheet" href="./main.css" />
 
-      button:hover + .info {
-        display: block; /* gpt */
-      }
-      button{
-        border: none;
-        background-color: rgb(250, 248, 248);
-      }
-      button:hover{
-        color: rgb(16, 126, 51);
-        background-color: black;
-      }
-    </style>
+    <title>스타벅스 과제</title>
   </head>
   <body>
-    <div class="box">
-      <img src="./images/starbucks_logo.png" alt="이미지" />
-      <div class="box1">
-        <a href="" style="font-size: 13px"><div class="topw">Sign In</div></a>
-        <p>&emsp;|&emsp;</p>
-        <a href="" style="font-size: 13px"
-          ><div class="topw">My Starbucks</div></a
-        >
-        <p>&emsp;|&emsp;</p>
-        <a href="" style="font-size: 13px"
-          ><div class="topw">Customer Service & Ideas</div></a
-        >
-        <p>&emsp;|&emsp;</p>
-        <a href="" style="font-size: 13px"
-          ><div class="topw">Find a Store&ensp;</div></a
-        >
-        <input type="text" id="uid" autofocus placeholder="통합검색" required />
+    <header>
+      <div class="box">
+        <img src="./images/starbucks_logo.png" alt="이미지" />
+        <div class="box1">
+          <a href="" style="font-size: 13px">
+            <div class="topw">Sign In</div>
+          </a>
+          <p>&emsp;|&emsp;</p>
+          <a href="" style="font-size: 13px"
+            ><div class="topw">My Starbucks</div></a
+          >
+          <p>&emsp;|&emsp;</p>
+          <a href="" style="font-size: 13px"
+            ><div class="topw">Customer Service & Ideas</div></a
+          >
+          <p>&emsp;|&emsp;</p>
+          <a href="" style="font-size: 13px"
+            ><div class="topw">Find a Store&ensp;</div></a
+          >
+          <input
+            type="text"
+            id="uid"
+            autofocus
+            placeholder="통합검색"
+            required
+          />
+        </div>
       </div>
-    </div>
-    <div class="b1">
-      <button>COFFEE</button>
-      <div class="info">
-        <h4>커피</h4>
-        <p>스타벅스 원두<br></p>
-        <p>스타벅스 비아<br></p>
-        <p>스타벅스 오리가미</p>
+      <div class="b1">
+        <button>COFFEE</button>
+        <div class="info">
+          <h4>커피</h4>
+          <p>스타벅스 원두<br /></p>
+          <p>스타벅스 비아<br /></p>
+          <p>스타벅스 오리가미</p>
+        </div>
       </div>
-    </div>
 
-    <div class="b2">
-      <button>MENU</button>
-      <div class="info">
-        <p>추가 정보</p>
+      <div class="b2">
+        <button>MENU</button>
+        <div class="info">
+          <p>추가 정보</p>
+        </div>
       </div>
-    </div>
 
-    <div class="b3">
-      <button>STORE</button>
-      <div class="info">
-        <p>추가 정보</p>
+      <div class="b3">
+        <button>STORE</button>
+        <div class="info">
+          <p>추가 정보</p>
+        </div>
       </div>
-    </div>
 
-    <div class="b4">
-      <button>RESPONSIBILITY</button>
-      <div class="info">
-        <p>추가 정보</p>
+      <div class="b4">
+        <button>RESPONSIBILITY</button>
+        <div class="info">
+          <p>추가 정보</p>
+        </div>
       </div>
-    </div>
 
-    <div class="b5">
-      <button>MY STARBUCKS REWARDS</button>
-      <div class="info">
-        <p>추가 정보</p>
+      <div class="b5">
+        <button>MY STARBUCKS REWARDS</button>
+        <div class="info">
+          <p>추가 정보</p>
+        </div>
       </div>
-    </div>
 
-    <div class="b6">
-      <button>WHAT'S NEW</button>
-      <div class="info">
-        <p>추가 정보</p>
+      <div class="b6">
+        <button>WHAT'S NEW</button>
+        <div class="info">
+          <p>추가 정보</p>
+        </div>
       </div>
-    </div>
       <!--<li>COFFEE</li>
          
         <li>커피</li>
@@ -194,6 +108,6 @@
         </ul>
       </ul>
     </ul>-->
-    </div>
+    </header>
   </body>
 </html>
