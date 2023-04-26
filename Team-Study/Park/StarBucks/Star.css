@@ -1,84 +1,105 @@
+/* common style
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+} */
 
 /*상단 메뉴바*/
- header{
-    background-color: rgb(231, 217, 200);
-    position: fixed;
+header {
+  width: 100%;
+  background-color: rgb(231, 217, 200);
+  position: fixed;
 }
-.menu{padding: 0px 100px 5px 100px;}
-.menu_img{
-    padding: 20px;
-
+/* Padding 대신, 가로길이를 줘 최대 길이 설정, margin을 auto로 줘 자연스럽게 가운데 정렬 */
+.menu {
+  width: 1100px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+}
+.menu_img {
+  position: absolute;
+  padding: 20px;
 }
 
 /*리스트*/
-li{
-    list-style: none;
+li {
+  list-style: none;
+}
+
+ul {
+  padding-left: 0;
+  margin-left: 0;
 }
 
 /*로그인 상단*/
 .menu_login {
-    
-    float: right;
-    padding: 5px;
-    
+  float: right;
+  padding: 5px;
 }
-.menu_login a{
-    padding: 10px;
-    text-decoration: none;
-    color: rgb(110, 104, 104);
-    font-size: 11px;
-    
-}
-.menu_login a:not(:last-child)::after{
-    content: "|"; /*글자 사이 줄*/
-    margin-left: 5px;
- 
+.menu_login a {
+  padding: 10px;
+  text-decoration: none;
+  color: rgb(110, 104, 104);
+  font-size: 11px;
 }
 
 /*메뉴바 두번쨰줄*/
 
-.menu_bar{
-    float: right;
-    font-size: 12px;
-    color: rgb(110, 104, 104);   
+.menu_bar {
+  float: right;
+  font-size: 12px;
+  color: rgb(110, 104, 104);
+  margin: 10px;
 }
-
 
 /* 메뉴창 이름 */
-.coffee{
-    padding: 10px;
-    display: inline-block;
-    cursor: pointer; 
-    
-  } 
-   .coffee:hover{
-    color: green;
-    background-color: black;
+.coffee {
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 15px;
 }
-  
-  /* 마우스 올릴때 나타날 메뉴창 */
-  .menu_bar .type{
-    display: inline-block;
-    padding: 20px;
-  }
-  .tip{
-    background-image: url("media/main_menu_pattern.jpg");
-  }
-  .coffee_menu {
-    position: absolute; 
-    width: 100%;
-    background-color: black;
-    color: white;
-    display: none;
-    
-  }
+.coffee:hover {
+  color: green;
+  background-color: #333;
+}
 
-  .coffee:hover + .coffee_menu{
-    display: block;
-   
-  }
+.coffee_menu {
+  top: 100px;
+  right: 0;
+  margin: 0 auto;
+  background-color: #333;
+  color: white;
+  display: none;
+}
 
-  
-  
- 
-  
+.coffee_menu .inner {
+  display: flex;
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.coffee:hover + .coffee_menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+}
+
+/* 마우스 올릴때 나타날 메뉴창 */
+.menu_bar .type {
+  padding: 20px;
+  margin: 20px;
+}
+
+.tip {
+  width: 100%;
+  background-image: url("./images/main_menu_pattern.jpg");
+}
+.tip .inner {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
