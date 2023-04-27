@@ -3,15 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
-header{
+header {
   background-color: rgb(250, 245, 236);
-  
 }
 .wrap {
   width: 1100px;
   height: 120px;
   position: relative;
-  margin:0 auto;
+  margin: 0 auto;
 }
 .logo {
   width: 100px;
@@ -55,8 +54,6 @@ form .icon {
   position: absolute;
   top: 70px;
   right: 0;
-  
-  
 }
 .menu2 > p {
   cursor: pointer;
@@ -78,16 +75,25 @@ form .icon {
 }
 
 .wrapper {
-  position: absolute;
+  height: 50px;
   background-color: aqua;
-  display: flex;
   list-style: none;
-  flex-direction: column;
-  color: white;
-  margin-top: 50px;
-  margin-left: 10px;
-  width: 100%;
+  color: rgb(1, 1, 1);
   
+  margin-left: 10px;
+ 
+}
+.wrapper .content {
+  display: none;
+  background-color: blueviolet;
+ position: fixed ;
+ width: 100%;
+ left: 0;
+ height: 200px;
+ top: 120px;
+}
+.wrapper:hover .content{
+  display: block;
 }
 
 .lnb2 {
@@ -166,7 +172,7 @@ form .icon {
   border-radius: 10px;
 }
 
-.menu2_1:hover + .wrapper{
+.menu2_1:hover + .wrapper {
   display: block;
 }
 
