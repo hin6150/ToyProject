@@ -9,4 +9,5 @@ button1.addEventListener("click", () => {
   const p = document.createElement("p");
   CE.append(p);
   p.innerHTML = input1.value;
+  console.log("add");
 });
