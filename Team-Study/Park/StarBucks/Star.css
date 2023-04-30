@@ -133,7 +133,8 @@ ul {
 section {
   z-index: 1;
 }
-.main_img {
+
+.main_img .inner {
   background-image: url("images/visual_bg.jpg");
 }
 
@@ -149,4 +150,20 @@ section {
   background-color: brown;
   color: white;
   transition: 0.5s;
+}
+
+/*오른쪽 사진 고정*/
+nav {
+  z-index: 3;
+}
+nav .poster {
+  position: fixed;
+  right: 10px;
+  top: 100px;
+}
+
+nav .poster img {
+  display: block;
+  padding: 10px;
+  border-radius: 20px;
 }
