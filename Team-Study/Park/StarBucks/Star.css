@@ -1,9 +1,8 @@
-/* common style
 .inner {
-  width: 1100px;
+  width: 1200px;
   margin: 0 auto;
   position: relative;
-} */
+}
 
 /*상단 메뉴바*/
 header {
@@ -41,6 +40,16 @@ ul {
 .menu_login a {
   padding: 10px;
   text-decoration: none;
+  color: rgb(136, 129, 129);
+  font-size: 11px;
+}
+.menu_login a:hover {
+  color: #333;
+}
+
+.menu_login b {
+  padding: 10px;
+  text-decoration: none;
   color: rgb(110, 104, 104);
   font-size: 11px;
 }
@@ -56,6 +65,7 @@ ul {
 
 /* 메뉴창 이름 */
 .coffee {
+  margin: 0;
   padding: 10px;
   display: inline-block;
   cursor: pointer;
@@ -64,6 +74,7 @@ ul {
 .coffee:hover {
   color: green;
   background-color: #333;
+  border-radius: 10px 10px 0 0;
 }
 
 .coffee_menu {
@@ -71,7 +82,7 @@ ul {
   right: 0;
   margin: 0 auto;
   background-color: #333;
-  color: white;
+  color: rgb(130, 120, 120);
   display: none;
 }
 
@@ -93,6 +104,16 @@ ul {
   padding: 20px;
   margin: 20px;
 }
+.menu_bar .type_main {
+  padding: 0 0 10px 0;
+  color: white;
+}
+.menu_bar .type_list li {
+  padding: 3px;
+}
+.menu_bar .type_list li:hover {
+  color: green;
+}
 
 .tip {
   width: 100%;
@@ -102,4 +123,22 @@ ul {
   padding: 20px;
   display: flex;
   flex-direction: column;
+}
+.tip .inner .type_main {
+  color: green;
+}
+
+/*커피 이미지 */
+.main_img  {
+  background-image: url("images/visual_bg.jpg");
+ 
+}
+
+.main_img .inner p{
+  position: absolute;
+  top: 420px;
+  left: 160px;
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
