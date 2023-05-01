@@ -11,31 +11,35 @@ if (search === focus) {
   search.ariaPlaceholder("");
 }
 
-const coffe_img = document.querySelectorAll(".main_img .inner img");
-coffe_img.forEach((img1) => {
+const coffee_img = document.querySelector(".main_img .inner img");
+coffee_img.
+
+/*gsap으로 시도
+const coffee_img = document.querySelectorAll(".main_img .inner img");
+coffee_img.forEach((img1) => {
   gsap.from(".img1", {
     duration: 2,
     opacity: 0.2,
   });
 });
-coffe_img.forEach((img2) => {
+coffee_img.forEach((img2) => {
   gsap.from(".img2", {
     duration: 2,
     opacity: 0.2,
     delay: 1,
   });
 });
-coffe_img.forEach((img3) => {
+coffee_img.forEach((img3) => {
   gsap.from(".img3", {
     duration: 2,
     opacity: 0.2,
     delay: 2,
   });
 });
-coffe_img.forEach((img4) => {
+coffee_img.forEach((img4) => {
   gsap.from(".img4", {
     duration: 2,
     opacity: 0.2,
     delay: 3,
   });
-});
+}); */
