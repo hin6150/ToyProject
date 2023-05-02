@@ -4,6 +4,7 @@ body {
 header {
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
 
 .inner {
@@ -16,6 +17,7 @@ header {
   margin: auto 0;
   height: 100px;
   position: relative;
+  padding-top: 20px;
 }
 .box1 {
   float: right;
@@ -42,7 +44,7 @@ input {
 input:focus {
   outline: none;
 }
-p {
+.box1 p {
   display: inline;
   font-size: 12px;
   font-weight: 800;
@@ -65,9 +67,6 @@ p {
   left: 0;
   display: none;
 }
-/* .info:hover {
-  background-color: rgb(55, 51, 51);
-} */
 .wrapper {
   background-color: rgb(55, 51, 51);
 }
@@ -105,52 +104,69 @@ li {
   margin-bottom: 10px;
 }
 .info-bottom {
-  display: block;
   background-image: url("./images/main_menu_pattern.jpg");
   width: 100%;
   height: 200px;
+}
+.side_bar {
+  position: fixed;
+  top: 150px;
+  left: 1390px;
+  z-index: 10;
+  gap: 30px;
+  display: grid;
+}
+.side_bar img {
+  border-radius: 10px;
 }
 .sbox {
   width: 100%;
   height: 650px;
   overflow: hidden;
-  position: absolute;
+  position: relative;
   top: 100px;
 }
-.sbox .inner img {
+.sbox:nth-child(1) {
+  z-index: 0;
+}
+.sbox:nth-child(2) {
   position: absolute;
-  z-index: 10;
-  top: 0;
-  /* right: 0; */
+  z-index: 1;
+  top: 170px;
+  left: 220px;
 }
-.info-bottom .inner {
-}
-/*.background {
-  width: 100px;
-  height: 200px;
-}
-.cup1 {
+.sbox:nth-child(3) {
   position: absolute;
+  z-index: 1;
+  top: 200px;
+  left: 1080px;
+  overflow: hidden;
 }
-.cup1Text {
+.sbox:nth-child(4) {
   position: absolute;
+  z-index: 1;
+  top: 180px;
+  left: 950px;
+  overflow: hidden;
 }
-.cup2 {
+.sbox:nth-child(5) {
   position: absolute;
+  z-index: 2;
+  top: 255px;
+  left: 870px;
+  overflow: hidden;
 }
-.cup2Text {
+.sbox:nth-child(6) {
   position: absolute;
+  z-index: 1;
+  top: 400px;
+  left: 630px;
+  overflow: hidden;
 }
-.spoon {
+.sbox:nth-child(7) {
   position: absolute;
+  z-index: 1;
+  top: 500px;
+  left: 450px;
+  overflow: hidden;
 }
-.d1125 {
-  position: absolute;
-}
-.card {
-  position: absolute;
-}
-.del {
-  position: absolute;
-}
-*/
