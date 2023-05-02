@@ -1,0 +1,156 @@
+body {
+  margin: 0%;
+}
+header {
+  position: fixed;
+  width: 100%;
+}
+
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+.box {
+  background-color: rgb(250, 248, 248);
+  margin: auto 0;
+  height: 100px;
+  position: relative;
+}
+.box1 {
+  float: right;
+}
+.topw {
+  color: black;
+  opacity: 0.8;
+  display: inline;
+}
+.topw:hover {
+  opacity: 1;
+}
+a {
+  text-decoration: none;
+  display: inline;
+}
+input {
+  border-radius: 5px;
+  border: 1px solid rgb(99, 184, 86);
+  font-size: 12px;
+  height: 30px;
+  width: 175px;
+}
+input:focus {
+  outline: none;
+}
+p {
+  display: inline;
+  font-size: 12px;
+  font-weight: 800;
+  opacity: 0.3;
+}
+
+.lower-box {
+  display: flex;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.info {
+  color: white;
+  background-color: rgb(55, 51, 51);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  display: none;
+}
+/* .info:hover {
+  background-color: rgb(55, 51, 51);
+} */
+.wrapper {
+  background-color: rgb(55, 51, 51);
+}
+.wrapper:hover .info {
+  display: block; /* gpt */
+  max-width: 100%;
+  height: 300px;
+}
+.wrapper:hover button {
+  background-color: rgb(55, 51, 51);
+  color: rgb(16, 126, 51);
+}
+button {
+  border: none;
+  background-color: rgb(250, 248, 248);
+  height: 50px;
+}
+button:hover {
+  color: rgb(16, 126, 51);
+  background-color: black;
+}
+.pp {
+  opacity: 0.4;
+}
+li {
+  list-style: none;
+  font-size: 11px;
+  /* opacity: ; */
+}
+.info .inner {
+  display: flex;
+  gap: 100px;
+}
+.info ul li {
+  margin-bottom: 10px;
+}
+.info-bottom {
+  display: block;
+  background-image: url("./images/main_menu_pattern.jpg");
+  width: 100%;
+  height: 200px;
+}
+.sbox {
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+  position: absolute;
+  top: 100px;
+}
+.sbox .inner img {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  /* right: 0; */
+}
+.info-bottom .inner {
+}
+/*.background {
+  width: 100px;
+  height: 200px;
+}
+.cup1 {
+  position: absolute;
+}
+.cup1Text {
+  position: absolute;
+}
+.cup2 {
+  position: absolute;
+}
+.cup2Text {
+  position: absolute;
+}
+.spoon {
+  position: absolute;
+}
+.d1125 {
+  position: absolute;
+}
+.card {
+  position: absolute;
+}
+.del {
+  position: absolute;
+}
+*/
