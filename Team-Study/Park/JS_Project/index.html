@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About the book</title>
+    <link rel="stylesheet" href="./mainstyle.css" />
+  </head>
+  <body>
+    <header>
+      <div class="main">
+        <button onclick="loadPage('5.html')" class="main-top">
+          About the book
+        </button>
+      </div>
+    </header>
+
+    <section>
+      <div class="list">
+        <button onclick="loadPage('1.html')" class="list-name">
+          베스트셀러
+        </button>
+        <button onclick="loadPage('2.html')" class="list-name">신간도서</button>
+        <button onclick="loadPage('3.html')" class="list-name">에세이</button>
+        <button onclick="loadPage('4.html')" class="list-name">소설</button>
+      </div>
+
+      <form class="serch">
+        <div class="serch-button">
+          <form>
+            <input type="text" list="book" />
+            <datalist id="book">
+              <option value="베스트셀러"></option>
+              <option value="신간도서"></option>
+              <option value="에세이"></option>
+              <option value="소설"></option>
+            </datalist>
+          </form>
+          <button type="submit" style="color: white">검색</button>
+        </div>
+      </form>
+
+      <iframe id="iframe" scrolling="NO"></iframe>
+    </section>
+
+    <script>
+      function loadPage(url) {
+        var iframe = document.getElementById("iframe");
+        iframe.src = url;
+      }
+    </script>
+  </body>
+</html>

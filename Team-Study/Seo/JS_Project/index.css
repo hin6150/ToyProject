@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrap {
+  width: 500px;
+  height: 700px;
+  background-color: rgb(213, 243, 233);
+  background: url(./images/back.jpeg) no-repeat center;
+  background-size: cover;
+  margin: 0 auto;
+}
+h1 {
+  position: relative;
+  text-align: center;
+  top: 50px;
+}
+.txt_box {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+input {
+  background-color: pink;
+  margin-left: 10px;
+  border-radius: 10px;
+}
+.submit {
+  width: 60px;
+}
+.click_txt {
+  color: rgb(249, 118, 179);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+  cursor: pointer;
+}
+
+.todo-box {
+  margin: 0 auto;
+  width: fit-content;
+}
+.todo-box .todoList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+.todoList li {
+  margin-left: 20px;
+}
+
+.x_btn {
+  margin-left: 50px;
+  background-color: pink;
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+}
