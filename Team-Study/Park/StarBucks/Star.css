@@ -10,6 +10,7 @@ header {
   background-color: rgb(231, 217, 200);
   position: fixed;
   z-index: 3;
+  top: 0;
 }
 /* Padding 대신, 가로길이를 줘 최대 길이 설정, margin을 auto로 줘 자연스럽게 가운데 정렬 */
 .menu {
@@ -38,30 +39,44 @@ ul {
   float: right;
   padding: 5px;
 }
-.menu_login a {
+.menu_login p {
+  display: inline-block;
   padding: 10px;
   text-decoration: none;
   color: rgb(136, 129, 129);
   font-size: 11px;
 }
-.menu_login a:hover {
+.menu_login p:hover {
   color: #333;
 }
 
-.menu_login b {
+.menu_login {
   padding: 10px;
   text-decoration: none;
   color: rgb(110, 104, 104);
   font-size: 11px;
 }
+.menu_login span {
+  position: absolute;
+  top: 27px;
+  right: 10px;
+}
+/* .menu_login input {
+  width: 20px;
+}
+.menu_login input:focus {
+  width: 200px;
+} */
 
 /*메뉴바 두번쨰줄*/
 
 .menu_bar {
-  float: right;
   font-size: 12px;
   color: rgb(110, 104, 104);
-  margin: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
 }
 
 /* 메뉴창 이름 */
@@ -72,7 +87,7 @@ ul {
   cursor: pointer;
   font-size: 15px;
 }
-.coffee:hover {
+.wrapper:hover {
   color: green;
   background-color: #333;
   border-radius: 10px 10px 0 0;
@@ -93,7 +108,7 @@ ul {
   margin: 0 auto;
 }
 
-.coffee:hover + .coffee_menu {
+.wrapper:hover > .coffee_menu {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -130,17 +145,21 @@ ul {
 }
 
 /*커피 이미지 */
-section {
+section .main_img {
   z-index: 1;
 }
 
 .main_img {
+  height: 650px;
   background-image: url("./images/visual_bg.jpg");
+  background-position: center;
 }
-
+.main_img {
+  margin: 100px 0 0 0;
+}
 .main_img .inner p {
   position: absolute;
-  top: 420px;
+  top: 320px;
   left: 160px;
   border: 1px solid black;
   padding: 10px 20px;

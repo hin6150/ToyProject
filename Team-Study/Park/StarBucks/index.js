@@ -1,20 +1,19 @@
-const search = document.querySelector(".menu_login .material-icon");
+const search = document.querySelector(".menu_login .material-symbols-outlined");
 const focused = document.createElement("input");
 if (search === focus) {
   search.classList.add("focused");
-  focused.addEventListener("focus", function () {
-    focused.style.width = "100px";
+  focused.addEventListener("focus", () => {
+    focused.style.width = "200px";
+    search.ariaPlaceholder("통합검색");
   });
-  search.ariaPlaceholder("통합검색");
-} else if (search === blur) {
+} else {
   search.classList.remove("focused");
-  search.ariaPlaceholder("");
+  focused.addEventListener("focus", () => {
+    focused.style.width = "10px";
+    search.ariaPlaceholder("");
+  });
 }
 
-const coffee_img = document.querySelector(".main_img .inner img");
-coffee_img.
-
-/*gsap으로 시도
 const coffee_img = document.querySelectorAll(".main_img .inner img");
 coffee_img.forEach((img1) => {
   gsap.from(".img1", {
@@ -42,4 +41,4 @@ coffee_img.forEach((img4) => {
     opacity: 0.2,
     delay: 3,
   });
-}); */
+});
