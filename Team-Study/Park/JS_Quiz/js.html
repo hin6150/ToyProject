@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="./Document.js"></script>
+    
   </head>
   <body>
     <div class="container">
@@ -16,5 +16,48 @@
         <p class="answer">아니요 과제가 너무 어려운것 같아요.</p>
       </div>
     </div>
+    <script src="./Document.js"></script>
   </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container"></div>
+    <button class="count-btn">
+      <p class="count">0</p>
+    </button>
+  </body>
+
+  <style>
+    .container {
+      width: 100%;
+      height: 90%;
+      position: fixed;
+      background-color: #eee;
+    }
+    button {
+      position: relative;
+      width: 10%;
+    }
+  </style>
+  <script>
+    let dark = document.querySelector(".container").innerHTML;
+    let btn = document.querySelector(".count-btn");
+
+    document.querySelector(".container").addEventListener("click", function () {
+      dark++;
+      if (btn % 2 == 0) {
+        dark.style.backgroundColor = "balck";
+      } else {
+        dark.style.backgroundColor = "white";
+      }
+    });
+  </script>
 </html>
