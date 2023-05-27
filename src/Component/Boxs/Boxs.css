@@ -1,0 +1,39 @@
+.secondBox {
+  position: relative;
+  width: 50%;
+  height: 765px;
+
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
+}
+
+.secondBox img {
+  width: 707px;
+  height: 765px;
+}
+
+.secondBoxText {
+  position: absolute;
+  width: 521px;
+  height: 390px;
+
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 130px;
+  text-align: center;
+
+  color: #ffffff;
+
+  z-index: 1;
+}
+
+.thirdBox {
+  position: relative;
+  width: 25%;
+  height: 765px;
+
+  background: rgba(206, 38, 206, 0.5);
+  border: 1px solid black;
+}
