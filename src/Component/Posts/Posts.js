@@ -5,9 +5,7 @@ export const FirstPost = (props) => {
   return (
     <div className="firstPost" style={{ width: "40vw" }}>
       <div className="firstPostImg"></div>
-      <div className="firstPostText">
-        {props.children}
-      </div>
+      <div className="firstPostText">{props.children}</div>
     </div>
   );
 };
@@ -17,7 +15,7 @@ export const SecondPost = (props) => {
     <div className="secondPost">
       <div className="secondPostImg"></div>
       <div className="secondPostText">
-        <p>{props.text}</p>
+        <p>{props.children}</p>
       </div>
     </div>
   );

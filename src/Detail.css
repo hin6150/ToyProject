@@ -6,6 +6,7 @@
 /* 지역 이름 */
 .mainName {
   text-align: center;
+  margin: 10px;
 }
 
 /* 홈 버튼 */
@@ -20,15 +21,30 @@
 .postOne {
   position: relative;
 }
+.postTwo {
+  position: relative;
+}
 /* 포스트 화살표 */
 .postOne .left {
   position: absolute;
-  top: 30vw;
+  top: 20vw;
   left: 5vw;
 }
 
 .postOne .right {
   position: absolute;
-  top: 30vw;
+  top: 20vw;
+  right: 5vw;
+}
+
+.postTwo .left {
+  position: absolute;
+  top: 20vw;
+  left: 5vw;
+}
+
+.postTwo .right {
+  position: absolute;
+  top: 20vw;
   right: 5vw;
 }

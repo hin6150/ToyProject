@@ -2,6 +2,7 @@ import React from "react";
 import { FirstPost, SecondPost } from "../Component/Posts/Posts";
 import { Link } from "react-router-dom";
 import "../Detail.css";
+import { FirstText, SecondText } from "../Component/Texts/Texts";
 
 const Detail = () => {
   return (
@@ -14,14 +15,24 @@ const Detail = () => {
       </div>
       <div className="postList">
         <div className="postOne">
-          <p className="left">왼쪽</p>
-          <p className="right">오른쪽</p>
+          <p className="left">
+            <button>왼쪽</button>
+          </p>
+          <p className="right">
+            <button>오른쪽</button>
+          </p>
           <FirstPost></FirstPost>
-          <SecondPost></SecondPost>
+          <FirstText></FirstText>
         </div>
         <div className="postTwo">
-          <FirstPost></FirstPost>
+          <p className="left">
+            <button>왼쪽</button>
+          </p>
+          <p className="right">
+            <button>오른쪽</button>
+          </p>
           <SecondPost></SecondPost>
+          <SecondText></SecondText>
         </div>
       </div>
     </div>

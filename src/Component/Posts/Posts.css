@@ -2,18 +2,20 @@
 .firstPost {
   width: 40vw;
   height: 50vh;
-  margin: 5vw 5vw 0vw 5vw;
+  margin: 0vw 5vw 0vw 5vw;
 
-  background: rgba(0, 0, 0, 0.2);
+  background-image: url("./img/dance.jpg");
+  background-size: cover;
   border: 1px solid black;
 }
 
 .secondPost {
   width: 40vw;
-  height: 10vh;
+  height: 50vh;
   margin: 0vw 5vw 0vw 5vw;
 
-  background: rgba(219, 190, 190, 0.2);
+  background-image: url("./img/blueberry.jpg");
+  background-size: cover;
   border: 1px solid black;
 }
 /* .firstPostText {
