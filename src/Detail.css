@@ -12,6 +12,8 @@
 /* 홈 버튼 */
 .homeButton {
   float: right;
+  color: black;
+  font-size: 30px;
 }
 .postList {
   display: flex;
@@ -29,22 +31,37 @@
   position: absolute;
   top: 20vw;
   left: 5vw;
+  color: white;
+  font-size: 50px;
 }
 
 .postOne .right {
   position: absolute;
   top: 20vw;
   right: 5vw;
+  color: white;
+  font-size: 50px;
 }
 
 .postTwo .left {
   position: absolute;
   top: 20vw;
   left: 5vw;
+  color: white;
+  font-size: 50px;
 }
 
 .postTwo .right {
   position: absolute;
   top: 20vw;
   right: 5vw;
+  color: white;
+  font-size: 50px;
+}
+
+.right :hover {
+  background-color: gray;
+}
+.left :hover {
+  background-color: gray;
 }
