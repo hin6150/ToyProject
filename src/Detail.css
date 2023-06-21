@@ -1,18 +1,22 @@
 .Main {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("img/back.png");
+  background-size: cover;
 }
 
 /* 지역 이름 */
 .mainName {
   text-align: center;
-  margin: 10px;
+  padding: 20px 0px 0px 0px;
+  color: white;
 }
 
 /* 홈 버튼 */
 .homeButton {
   float: right;
-  color: black;
+  margin: 10px;
+  color: white;
   font-size: 30px;
 }
 .postList {

@@ -12,6 +12,7 @@ import {
 const Detail = () => {
   return (
     <div className="Main">
+      
       <div className="header">
         <h1 className="mainName">천안(지역 이름)</h1>
         <Link to={"/"}>
@@ -47,7 +48,6 @@ const Detail = () => {
           <SecondPost></SecondPost>
           <SecondText>
             <h1>블루베리</h1>
-            <br></br>
             <p>무농약 친환경 재배된 블루베리 천안에서 수확시작</p>
           </SecondText>
         </div>

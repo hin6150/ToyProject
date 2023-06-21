@@ -5,6 +5,7 @@
     margin: 0vw 5vw 0vw 5vw;
   
     border: 1px solid black;
+    background-color: gray;
   }
   
   .SecondText {
@@ -13,6 +14,8 @@
     margin: 0vw 5vw 0vw 5vw;
   
     border: 1px solid black;
+    background-color: gray;
+
   }
   /* .firstPostText {
     text-align: center;
