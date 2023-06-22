@@ -1,9 +1,9 @@
 .Box {
   position: relative;
-  height: 36vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
 }
 .Box img {
   width: 100%;
@@ -18,8 +18,7 @@
   font-family: "Noto Sans KR";
   font-style: normal;
   font-weight: 700;
-  font-size: 40px;
-  text-align: center;
+  font-size: 4vw;
 
   color: #ffffff;
 }
