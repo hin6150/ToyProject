@@ -1,71 +1,123 @@
+/* 메인배경 */
 .Main {
   width: 100vw;
   height: 100vh;
-  background-image: url("img/back.png");
-  background-size: cover;
+  background-color: #c91558;
+}
+
+/* 헤더 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+hr {
+  color: black;
 }
 
 /* 지역 이름 */
 .mainName {
+  font-size: 50px;
+  color: black;
+  margin: auto;
   text-align: center;
-  padding: 20px 0px 0px 0px;
-  color: white;
+  font-weight: bold;
 }
 
 /* 홈 버튼 */
 .homeButton {
-  float: right;
-  margin: 10px;
-  color: white;
+  color: black;
+  font-size: 40px;
+  padding: 20px 0px 20px 40px;
+}
+
+/* 지역 선택 버튼 */
+.areaList {
+  color: black;
   font-size: 30px;
+  padding: 20px 40px 20px 0px;
 }
-.postList {
-  display: flex;
+
+.bg {
   width: 100vw;
-  height: 100vw;
+  height: 100vh;
+  color: rgba(0, 0, 0, 0.6);
 }
+
+/* 축제,특산품 포스터 선택 버튼 */
+.changePoster {
+  display: flex;
+  justify-content: center;
+}
+
+.typeButton {
+  font-size: 20px;
+  text-align: center;
+  padding: 40px 10px 0px 10px;
+}
+
+/* 지역 축제 설명 텍스트 */
+
+.mainExplain {
+  color: black;
+  float: left;
+  font-size: 30px;
+  padding: 60px 60px 20px 60px;
+  width: 20vw;
+}
+
+.subExplain {
+  font-size: 15px;
+  padding: 60px 60px 20px 60px;
+  width: 20vw;
+}
+
+.linkButton {
+  float: left;
+  margin: 20px 60px 20px 60px;
+  padding: 5px;
+
+  text-align: center;
+  background-color: gray;
+  color: black;
+  border-radius: 20px;
+
+  width: 12vw;
+}
+.linkButton:link {
+  text-decoration-line: none;
+}
+
+/* 축제 포스터 */
+
+/* .postList {
+  display: flex;
+} */
+
+.posts {
+  position: absolute;
+  width: 40vw;
+  height: 60vh;
+  padding: 50px;
+}
+
 .postOne {
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40vw;
+  height: 60vw;
 }
 .postTwo {
-  position: relative;
-}
-/* 포스트 화살표 */
-.postOne .left {
   position: absolute;
-  top: 20vw;
-  left: 5vw;
-  color: white;
-  font-size: 50px;
+  width: 40vw;
+  height: 60vh;
+  padding: 50px;
 }
-
-.postOne .right {
+.postThree {
   position: absolute;
-  top: 20vw;
-  right: 5vw;
-  color: white;
-  font-size: 50px;
-}
-
-.postTwo .left {
-  position: absolute;
-  top: 20vw;
-  left: 5vw;
-  color: white;
-  font-size: 50px;
-}
-
-.postTwo .right {
-  position: absolute;
-  top: 20vw;
-  right: 5vw;
-  color: white;
-  font-size: 50px;
-}
-
-.right :hover {
-  background-color: gray;
-}
-.left :hover {
-  background-color: gray;
+  width: 40vw;
+  height: 60vh;
+  padding: 50px;
 }

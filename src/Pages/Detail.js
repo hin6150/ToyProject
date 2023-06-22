@@ -1,55 +1,76 @@
-import React from "react";
-import { FirstPost, SecondPost } from "../Component/Posts/Posts";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import "../Detail.css";
-import { FirstText, SecondText } from "../Component/Texts/Texts";
-import {
-  MdHome,
-  MdKeyboardArrowRight,
-  MdKeyboardArrowLeft,
-} from "react-icons/md";
+import { MdHome, MdDensityMedium } from "react-icons/md";
+import Carousel from "react-material-ui-carousel";
+import { Paper } from "@mui/material";
+
+import ModalBasic from "../Component/Sidebar/Sidebar";
 
 const Detail = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const sideevent = () => {
+    setModalOpen(true);
+  };
+
+  const festivevent = () => {
+    console.log("축제 포스터");
+  };
+
+  const foodevent = () => {
+    console.log("특산품 포스터");
+  };
+
   return (
     <div className="Main">
-      
+      {modalOpen && <ModalBasic setModalOpen={setModalOpen} />}
       <div className="header">
-        <h1 className="mainName">천안(지역 이름)</h1>
         <Link to={"/"}>
           <MdHome className="homeButton">홈</MdHome>
         </Link>
-      </div>
 
-      <div className="postList">
-        <div className="postOne">
-          <p className="left">
-            <MdKeyboardArrowLeft>왼쪽</MdKeyboardArrowLeft>
-          </p>
-          <p className="right">
-            <MdKeyboardArrowRight>오른쪽</MdKeyboardArrowRight>
-          </p>
-          <FirstPost></FirstPost>
-          <FirstText>
-            <h1>천안흥타령춤축제</h1>
-            <ul>
-              <li>2023-10-05 ~ 2023-10-09</li>
-              <li> 천안종합운동장 일원</li>
-              <li> http://www.cheonanfestival.com/</li>
-            </ul>
-          </FirstText>
+        <h1 className="mainName">보령</h1>
+        <div>
+          <div></div>
+          <MdDensityMedium className="areaList" onClick={sideevent}>
+            모달 띄우기
+          </MdDensityMedium>
         </div>
-        <div className="postTwo">
-          <p className="left">
-            <MdKeyboardArrowLeft>왼쪽</MdKeyboardArrowLeft>
+      </div>
+      <hr />
+      <div className="changePoster">
+        <p className="typeButton" onClick={festivevent}>
+          축제
+        </p>
+        <p className="typeButton">|</p>
+        <p className="typeButton" onClick={foodevent}>
+          특산품
+        </p>
+      </div>
+      <div style={{ display: "flex" }}>
+        <div className="postExplain">
+          <p className="mainExplain">
+            굴 축제 기간에는 서해안 제일의 별미 천북 굴 구이는 물론 굴을 이용한
+            갖가지 음식을 맛볼 수 있으며 관광객을 위한 볼거리와 즐길 거리 등
+            이벤트가 다채롭게 마련된다.
           </p>
-          <p className="right">
-            <MdKeyboardArrowRight>오른쪽</MdKeyboardArrowRight>
-          </p>
-          <SecondPost></SecondPost>
-          <SecondText>
-            <h1>블루베리</h1>
-            <p>무농약 친환경 재배된 블루베리 천안에서 수확시작</p>
-          </SecondText>
+          <p className="subExplain">기 간: 12월 첫째주 예정</p>
+          <Link
+            to={
+              "http://www.brcn.go.kr/prog/attraction/tour/sub01_07/view.do?listOrder=&searchCondition=&searchKeyword=&searchLocalCode=&searchMonth=&themeCode=1069&attractionCode=13"
+            }
+          >
+            <p className="linkButton">상세페이지 이동</p>
+          </Link>
+        </div>
+
+        <div className="postList">
+          <Carousel className="posts">
+            <Paper className="postOne">1</Paper>
+            <Paper className="postTwo">2</Paper>
+            <Paper className="postThree">3</Paper>
+          </Carousel>
         </div>
       </div>
     </div>

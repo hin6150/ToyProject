@@ -1,18 +1,23 @@
 /* 포스터 */
-.firstPost {
+.firstPost:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 40vw;
   height: 50vh;
-  margin: 0vw 5vw 0vw 5vw;
+  margin: 3vw 5vw 0vw 5vw;
 
   background-image: url("./img/dance.jpg");
   background-size: cover;
   border: 1px solid black;
 }
 
-.secondPost {
+.secondPost:nth-child(2) {
+  position: absolute;
+
   width: 40vw;
   height: 50vh;
-  margin: 0vw 5vw 0vw 5vw;
+  margin: 3vw 5vw 0vw 5vw;
 
   background-image: url("./img/blueberry.jpg");
   background-size: cover;
