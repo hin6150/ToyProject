@@ -1,8 +1,9 @@
 import React from "react";
 import { Banner } from "../Component/Banner/Banner";
 import Article from "../Component/Article/Article";
-import { Box } from "../Component/Boxs/Boxs";
-import { OutBox } from "../Component/SpecialBox/OutBox";
+import { Box, BoxTypeTwo } from "../Component/Boxs/Boxs";
+import { LastBox } from "../Component/Boxs/Boxs";
+import { SpecialBox } from "../Component/SpecialBox/SpecialBox";
 
 export const Main = () => {
   return (
@@ -44,23 +45,48 @@ export const Main = () => {
         </Box>
       </Article>
       <Article>
-        <OutBox></OutBox>
-        <Box size="36vw" url="호두" height="48vw"></Box>
+        <SpecialBox></SpecialBox>
+        <Box size="36vw" url="호두" height="48vw">
+          <p>
+            CHEONAN <br />
+            WALNUT
+          </p>
+        </Box>
       </Article>
       <Article>
-        <Box size="70vw" url="배" height="16vw"></Box>
-        <Box size="30vw" url="Rectangle 32" height="16vw"></Box>
+        <Box size="70vw" url="배" height="32vw"></Box>
+        <BoxTypeTwo size="30vw" url="Rectangle 32" height="32vw" right="5%">
+          <p>
+            Local
+            <br />
+            Specialties
+            <br />
+            of the Month
+          </p>
+        </BoxTypeTwo>
       </Article>
       <Article>
-        <Box size="30vw" url="pink22" height="16vw"></Box>
-        <Box size="70vw" url="boryeong" height="16vw"></Box>
+        <BoxTypeTwo size="30vw" url="pink22" height="36vw" right="65%">
+          <p>
+            Festival
+            <br />
+            of the Month
+          </p>
+        </BoxTypeTwo>
+        <Box size="70vw" url="boryeong" height="36vw"></Box>
       </Article>
       <Article>
-        <Box size="70vw" url="festival" height="16vw"></Box>
-        <Box size="30vw" url="pink22" height="16vw"></Box>
+        <Box size="70vw" url="festival" height="36vw"></Box>
+        <BoxTypeTwo size="30vw" url="pink22" height="36vw" right="5%">
+          <p>
+            Festival
+            <br />
+            of the Month
+          </p>
+        </BoxTypeTwo>
       </Article>
       <Article>
-        <Box size="100%" url="lastimg" height="100vw"></Box>
+        <LastBox size="100%" url="tree" height="100vh"></LastBox>
       </Article>
     </div>
   );
