@@ -1,0 +1,19 @@
+/* 축제,특산품 포스터 선택 버튼 */
+.changePoster {
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+}
+
+.changePoster p {
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.typeButton:hover {
+  cursor: pointer;
+}

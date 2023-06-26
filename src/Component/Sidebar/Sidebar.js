@@ -30,21 +30,17 @@ function ModalBasic({ setModalOpen, setMainName }) {
   ];
 
   return (
-    <div>
-      <div className="modal">
-        <div className="modalTop">
-          <p className="modalexit">충청남도 지역</p>
-          <p className="modalexit" onClick={closeModal}>
-            X
-          </p>
-        </div>
-        <ul className="areaList">
+    <div className="modal">
+      <div className="modalTop">
+        <p className="modalexit">충청남도 지역</p>
+        <p className="modalexit" onClick={closeModal}>
+          X
+        </p>
+      </div>
+      <div className="areaList">
+        <ul>
           {areas.map((area) => (
-            <li
-              key={area}
-              className="area"
-              onClick={() => handleAreaClick(area)}
-            >
+            <li key={area} className="area" onClick={() => handleAreaClick(area)}>
               {area}
             </li>
           ))}
@@ -53,5 +49,14 @@ function ModalBasic({ setModalOpen, setMainName }) {
     </div>
   );
 }
+
+export const Sidebar = ({ setModalOpen, setMainName }) => {
+  return (
+    <>
+      <div className="Backdrop" onClick={() => setModalOpen(false)} />
+      <ModalBasic setModalOpen={setModalOpen} setMainName={setMainName} />
+    </>
+  );
+};
 
 export default ModalBasic;
