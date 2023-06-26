@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import "../Detail.css";
 import { MdHome, MdDensityMedium } from "react-icons/md";
-import Carousel from "react-material-ui-carousel";
-import { Paper } from "@mui/material";
+import SlideShow from "../Component/Texts/Texts";
+// import Carousel from "react-material-ui-carousel";
+// import { Paper } from "@mui/material";
 
 import ModalBasic from "../Component/Sidebar/Sidebar";
+import Foodshow from "../Component/Foodshow/Foodshow";
 
 const Detail = () => {
+  const [showSlideShow, setShowSlideShow] = useState(true);
   const [modalOpen, setModalOpen] = useState(false);
 
   const sideevent = () => {
@@ -15,15 +18,18 @@ const Detail = () => {
   };
 
   const festivevent = () => {
-    console.log("축제 포스터");
+    setShowSlideShow(true);
   };
 
   const foodevent = () => {
-    console.log("특산품 포스터");
+    setShowSlideShow(false);
   };
 
   return (
     <div className="Main">
+      {modalOpen && (
+        <div className="Backdrop" onClick={() => setModalOpen(false)} />
+      )}{" "}
       {modalOpen && <ModalBasic setModalOpen={setModalOpen} />}
       <div className="header">
         <Link to={"/"}>
@@ -51,9 +57,9 @@ const Detail = () => {
       <div style={{ display: "flex" }}>
         <div className="postExplain">
           <p className="mainExplain">
-            굴 축제 기간에는 서해안 제일의 별미 천북 굴 구이는 물론 굴을 이용한
-            갖가지 음식을 맛볼 수 있으며 관광객을 위한 볼거리와 즐길 거리 등
-            이벤트가 다채롭게 마련된다.
+            서해안 제일의 별미 <br></br>천북 굴 구이와 <br></br>굴을 이용한
+            <br></br>
+            갖가지 음식을 <br></br>맛볼 수 있습니다.
           </p>
           <p className="subExplain">기 간: 12월 첫째주 예정</p>
           <Link
@@ -66,11 +72,7 @@ const Detail = () => {
         </div>
 
         <div className="postList">
-          <Carousel className="posts">
-            <Paper className="postOne">1</Paper>
-            <Paper className="postTwo">2</Paper>
-            <Paper className="postThree">3</Paper>
-          </Carousel>
+          {showSlideShow ? <SlideShow /> : <Foodshow />}
         </div>
       </div>
     </div>

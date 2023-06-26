@@ -1,23 +1,30 @@
 /* 포스터 */
-.FirstText {
-    width: 40vw;
-    height: 10vh;
-    margin: 0vw 5vw 0vw 5vw;
-  
-    border: 1px solid black;
-    background-color: gray;
-  }
-  
-  .SecondText {
-    width: 40vw;
-    height: 10vh;
-    margin: 0vw 5vw 0vw 5vw;
-  
-    border: 1px solid black;
-    background-color: gray;
+.postList {
+  display: flex;
+}
 
-  }
-  /* .firstPostText {
-    text-align: center;
-  } */
-  
+.postListOne {
+  position: absolute;
+  top: 10vw;
+  left: 40vw;
+  width: 25vw;
+  height: 35vw;
+  z-index: 2;
+}
+
+.postListTwo {
+  position: absolute;
+  top: 12vw;
+  left: 50vw;
+  width: 25vw;
+  height: 30vw;
+  z-index: 1;
+}
+.postListThree {
+  position: absolute;
+  top: 14vw;
+  left: 60vw;
+  width: 25vw;
+  height: 25vw;
+  z-index: 0;
+}
