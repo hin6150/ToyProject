@@ -1,0 +1,30 @@
+/* 포스터 */
+.postList {
+  display: flex;
+}
+
+.postListOne {
+  position: absolute;
+  top: 10vw;
+  left: 40vw;
+  width: 25vw;
+  height: 35vw;
+  z-index: 2;
+}
+
+.postListTwo {
+  position: absolute;
+  top: 12vw;
+  left: 50vw;
+  width: 25vw;
+  height: 30vw;
+  z-index: 1;
+}
+.postListThree {
+  position: absolute;
+  top: 14vw;
+  left: 60vw;
+  width: 25vw;
+  height: 25vw;
+  z-index: 0;
+}
