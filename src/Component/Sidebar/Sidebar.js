@@ -1,9 +1,33 @@
+import React from "react";
 import "./Sidebar.css";
 
-function ModalBasic({ setModalOpen }) {
+function ModalBasic({ setModalOpen, setMainName }) {
   const closeModal = () => {
     setModalOpen(false);
   };
+
+  const handleAreaClick = (areaName) => {
+    setMainName(areaName);
+    setModalOpen(false);
+  };
+
+  const areas = [
+    "당진",
+    "서산",
+    "아산",
+    "천안",
+    "예산",
+    "태안",
+    "계룡",
+    "금산",
+    "공주",
+    "청양",
+    "홍성",
+    "부여",
+    "논산",
+    "보령",
+    "서천",
+  ];
 
   return (
     <div>
@@ -14,21 +38,17 @@ function ModalBasic({ setModalOpen }) {
             X
           </p>
         </div>
-        <p className="area">당진</p>
-        <p className="area">서산</p>
-        <p className="area">아산</p>
-        <p className="area">천안</p>
-        <p className="area">예산</p>
-        <p className="area">태안</p>
-        <p className="area">계룡</p>
-        <p className="area">금산</p>
-        <p className="area">공주</p>
-        <p className="area">청양</p>
-        <p className="area">홍성</p>
-        <p className="area">부여</p>
-        <p className="area">논산</p>
-        <p className="area">보령</p>
-        <p className="area">서천</p>
+        <ul className="areaList">
+          {areas.map((area) => (
+            <li
+              key={area}
+              className="area"
+              onClick={() => handleAreaClick(area)}
+            >
+              {area}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

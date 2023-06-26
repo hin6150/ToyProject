@@ -3,12 +3,13 @@ import "./Foodshow.css";
 
 const Foodshow = () => {
   const imageFiles = [
-    "./img/post1.jpg",
+    "./img/post1.jpeg",
     "./img/post2.jpg",
     "./img/post3.jpg",
     "./img/post4.jpg",
     "./img/post5.jpg",
   ];
+  //   이미지가 안넣어짐...
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -26,7 +27,7 @@ const Foodshow = () => {
   return (
     <div className="postList">
       <img
-        src="https://t1.daumcdn.net/cfile/tistory/23116133597AD34F07"
+        src={"https://t1.daumcdn.net/cfile/tistory/23116133597AD34F07"}
         className="postListOne"
       ></img>
       <img
@@ -37,6 +38,7 @@ const Foodshow = () => {
         src="https://t1.daumcdn.net/cfile/blog/994FCB3A5BD66ECB2F"
         className="postListThree"
       ></img>
+      {/* 일단 링트로 페이지 예시 */}
     </div>
   );
 };

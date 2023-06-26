@@ -1,6 +1,8 @@
 /* 포스터 */
 .postList {
   display: flex;
+  flex-shrink: 0;
+  transition: transform 0.5s ease-in-out;
 }
 
 .postListOne {
