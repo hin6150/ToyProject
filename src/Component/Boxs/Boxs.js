@@ -1,20 +1,22 @@
 import React from "react";
 import "./Boxs.css";
+import Tree from "../Tree/Tree";
+import { useNavigate } from "react-router-dom";
 
 export const Box = (props) => {
   return (
-    <div class="Box" style={{ width: props.size, height: props.height }}>
+    <div className="Box" style={{ width: props.size, height: props.height }}>
       <img src={`./img/${props.url}.png`} alt={props.url} />
-      <div class="BoxText">{props.children}</div>
+      <div className="BoxText">{props.children}</div>
     </div>
   );
 };
 
 export const BoxTypeTwo = (props) => {
   return (
-    <div class="BoxTypeTwo" style={{ width: props.size, height: props.height }}>
+    <div className="BoxTypeTwo" style={{ width: props.size, height: props.height }}>
       <img src={`./img/${props.url}.png`} alt={props.url} />
-      <div class="BoxTypeTwoText" style={{ right: props.right }}>
+      <div className="BoxTypeTwoText" style={{ right: props.right }}>
         {props.children}
       </div>
     </div>
@@ -23,24 +25,18 @@ export const BoxTypeTwo = (props) => {
 
 export const BoxTypeThree = (props) => {
   return (
-    <div
-      class="BoxTypeThree"
-      style={{ width: props.size, height: props.height }}
-    >
+    <div className="BoxTypeThree" style={{ width: props.size, height: props.height }}>
       <img src={`./img/${props.url}.png`} alt={props.url} />
-      <div class="BoxTypeThreeText">{props.children}</div>
+      <div className="BoxTypeThreeText">{props.children}</div>
     </div>
   );
 };
 
 export const BoxTypeFour = (props) => {
   return (
-    <div
-      class="BoxTypeFour"
-      style={{ width: props.size, height: props.height }}
-    >
+    <div className="BoxTypeFour" style={{ width: props.size, height: props.height }}>
       <img src={`./img/${props.url}.png`} alt={props.url} />
-      <div class="BoxTypeFourTextOne">
+      <div className="BoxTypeFourTextOne">
         <p>
           BORYEONG
           <br />
@@ -49,7 +45,7 @@ export const BoxTypeFour = (props) => {
           FESTIVAL
         </p>
       </div>
-      <div class="BoxTypeFourTextTwo">
+      <div className="BoxTypeFourTextTwo">
         <p>
           충청남도
           <br />
@@ -58,7 +54,7 @@ export const BoxTypeFour = (props) => {
           신흥동 2282
         </p>
       </div>
-      <div class="BoxTypeFourTextThree">
+      <div className="BoxTypeFourTextThree">
         <p>2023.07.21 - 2023.08.06</p>
         <p>041-930-0891</p>
       </div>
@@ -68,12 +64,9 @@ export const BoxTypeFour = (props) => {
 
 export const BoxTypeFive = (props) => {
   return (
-    <div
-      class="BoxTypeFour"
-      style={{ width: props.size, height: props.height }}
-    >
+    <div className="BoxTypeFour" style={{ width: props.size, height: props.height }}>
       <img src={`./img/${props.url}.png`} alt={props.url} />
-      <div class="BoxTypeFourTextOne">
+      <div className="BoxTypeFourTextOne">
         <p>
           PINNACLE LAND
           <br />
@@ -82,7 +75,7 @@ export const BoxTypeFive = (props) => {
           FESTIVAL
         </p>
       </div>
-      <div class="BoxTypeFourTextTwo">
+      <div className="BoxTypeFourTextTwo">
         <p>
           충청남도
           <br />
@@ -91,7 +84,7 @@ export const BoxTypeFive = (props) => {
           월선길 20-42
         </p>
       </div>
-      <div class="BoxTypeFourTextThree">
+      <div className="BoxTypeFourTextThree">
         <p>2023.03.24 - 2023.05.30</p>
         <p>041-541-2582</p>
       </div>
@@ -99,11 +92,10 @@ export const BoxTypeFive = (props) => {
   );
 };
 
-export const LastBox = (props) => {
+export const LastBox = () => {
   return (
-    <div class="LastBox" style={{ width: props.size, height: props.height }}>
-      <img src={`./img/${props.url}.svg`} alt={props.url} />
-      <div class="BoxText">{props.children}</div>
+    <div className="LastBox">
+      <Tree width="100vw" height="100vh" />
     </div>
   );
 };
