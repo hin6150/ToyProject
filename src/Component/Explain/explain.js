@@ -7,13 +7,8 @@ export const ExplainFest = () => {
     <div className="postExplain">
       <p className="mainExplain">서해안 제일의 별미 천북 굴 구이와 굴을 이용한 갖가지 음식을 맛볼 수 있습니다.</p>
       <p className="subExplain">기 간: 12월 첫째주 예정</p>
-      <Link
-        to={
-          "http://www.brcn.go.kr/prog/attraction/tour/sub01_07/view.do?listOrder=&searchCondition=&searchKeyword=&searchLocalCode=&searchMonth=&themeCode=1069&attractionCode=13"
-        }
-      >
-        <p className="linkButton">상세페이지 이동</p>
-      </Link>
+
+      <p className="linkButton">상세페이지 이동</p>
     </div>
   );
 };

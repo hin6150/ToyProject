@@ -1,4 +1,4 @@
-import "./Card.Module.css";
+import "./Card.css";
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 

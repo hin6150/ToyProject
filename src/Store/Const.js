@@ -1,3 +1,6 @@
+import { v4 as uuidv4 } from "uuid";
+import Card from "../Component/Card/Card";
+
 export const cityPaths = [
   {
     d: "M924.143 1226.34L920.249 1008.87C919.621 974.399 909.826 940.489 890.234 912.169C881.317 899.233 869.7 886.297 854.692 874.868C854.504 874.68 854.253 874.491 854.001 874.303C827.314 854.208 794.284 844.412 760.878 845.04L539.968 848.996L540.093 849.122H539.842V1070.04C539.842 1103.44 550.266 1136.29 570.8 1162.6C570.988 1162.85 571.176 1163.1 571.365 1163.35C583.107 1178.11 596.231 1189.47 609.292 1198.2C637.927 1217.29 672.087 1226.46 706.498 1226.46H924.143V1226.34Z",
@@ -162,4 +165,28 @@ export const areasEnglish = [
   "Geumsan",
   "Gyeryong",
   "Seosan",
+];
+export const cards = [
+  {
+    key: uuidv4(),
+    content: <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/convertplus_thumbnail.jpg" />,
+  },
+  {
+    key: uuidv4(),
+    content: <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/acf_pro.png" />,
+  },
+  {
+    key: uuidv4(),
+    content: (
+      <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/layer_slider_plugin_thumb.png" />
+    ),
+  },
+  {
+    key: uuidv4(),
+    content: <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2016/08/slider_revolution-1.png" />,
+  },
+  {
+    key: uuidv4(),
+    content: <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2019/01/pwa_880_660.jpg" />,
+  },
 ];
