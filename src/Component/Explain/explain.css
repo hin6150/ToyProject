@@ -1,13 +1,12 @@
 /* 지역 축제 설명 텍스트 */
 .postExplain {
-  width: fit-content;
-  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-left: 40px;
+  margin: 50px 40px;
   width: 30vw;
+  box-sizing: border-box;
 }
 
 .mainExplain {
@@ -32,6 +31,7 @@
 
   font-size: 25px;
 }
+
 .linkButton:link {
   text-decoration-line: none;
 }

@@ -7,7 +7,7 @@
   min-width: 300px;
   height: 100vh;
   background-color: white;
-  z-index: 2;
+  z-index: 5;
 }
 
 /* 모달창 이름 */
