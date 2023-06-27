@@ -2,7 +2,7 @@ import React from "react";
 import "./Section.css";
 
 const Section = (props) => {
-  return <section>{props.children}</section>;
+  return <div className="section">{props.children}</div>;
 };
 
 export default Section;

@@ -1,22 +1,14 @@
 import React from "react";
 import { Banner } from "../Component/Banner/Banner";
 import Article from "../Component/Article/Article";
-import {
-  Box,
-  BoxTypeTwo,
-  BoxTypeThree,
-  BoxTypeFour,
-  LastBox,
-  BoxTypeFive,
-} from "../Component/Boxs/Boxs";
+import { Box, BoxTypeTwo, BoxTypeThree, BoxTypeFour, LastBox, BoxTypeFive } from "../Component/Boxs/Boxs";
 import { SpecialBox } from "../Component/SpecialBox/SpecialBox";
+import Section from "../Component/Section/Section";
 
 export const Main = () => {
   return (
-    <div>
-      <Article>
-        <Banner></Banner>
-      </Article>
+    <Section>
+      <Banner></Banner>
       <Article>
         <Box size="36vw" url="mud" height="36vw">
           <p>
@@ -85,10 +77,10 @@ export const Main = () => {
             of the Month
           </p>
         </BoxTypeTwo>
-        <BoxTypeFour size="70vw" url="boryeong" height="36vw"></BoxTypeFour>
+        <BoxTypeFour size="70vw" url="boryeong" height="36vw" />
       </Article>
       <Article>
-        <BoxTypeFive size="70vw" url="festival" height="36vw"></BoxTypeFive>
+        <BoxTypeFive size="70vw" url="festival" height="36vw" />
         <BoxTypeTwo size="30vw" url="pink22" height="36vw" right="5%">
           <p>
             Festival
@@ -97,9 +89,7 @@ export const Main = () => {
           </p>
         </BoxTypeTwo>
       </Article>
-      <Article>
-        <LastBox size="100%" url="tree1" height="100vh"></LastBox>
-      </Article>
-    </div>
+      <LastBox />
+    </Section>
   );
 };

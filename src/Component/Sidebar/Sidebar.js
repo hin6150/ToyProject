@@ -1,33 +1,19 @@
 import React from "react";
 import "./Sidebar.css";
+import { areas, areasEnglish } from "../../Store/Const";
+import { useNavigate } from "react-router-dom";
 
 function ModalBasic({ setModalOpen, setMainName }) {
+  const navigate = useNavigate();
+
   const closeModal = () => {
     setModalOpen(false);
   };
 
-  const handleAreaClick = (areaName) => {
-    setMainName(areaName);
+  const handleAreaClick = (index) => {
+    navigate(`/detail/${areasEnglish[index]}`);
     setModalOpen(false);
   };
-
-  const areas = [
-    "당진",
-    "서산",
-    "아산",
-    "천안",
-    "예산",
-    "태안",
-    "계룡",
-    "금산",
-    "공주",
-    "청양",
-    "홍성",
-    "부여",
-    "논산",
-    "보령",
-    "서천",
-  ];
 
   return (
     <div className="modal">
@@ -39,8 +25,8 @@ function ModalBasic({ setModalOpen, setMainName }) {
       </div>
       <div className="areaList">
         <ul>
-          {areas.map((area) => (
-            <li key={area} className="area" onClick={() => handleAreaClick(area)}>
+          {areas.map((area, index) => (
+            <li key={area} className="area" onClick={() => handleAreaClick(index)}>
               {area}
             </li>
           ))}
