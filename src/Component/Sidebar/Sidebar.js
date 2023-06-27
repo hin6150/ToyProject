@@ -3,7 +3,7 @@ import "./Sidebar.css";
 import { areas, areasEnglish } from "../../Store/Const";
 import { useNavigate } from "react-router-dom";
 
-function ModalBasic({ setModalOpen, setMainName }) {
+function ModalBasic({ setModalOpen }) {
   const navigate = useNavigate();
 
   const closeModal = () => {
@@ -36,11 +36,11 @@ function ModalBasic({ setModalOpen, setMainName }) {
   );
 }
 
-export const Sidebar = ({ setModalOpen, setMainName }) => {
+export const Sidebar = ({ setModalOpen }) => {
   return (
     <>
       <div className="Backdrop" onClick={() => setModalOpen(false)} />
-      <ModalBasic setModalOpen={setModalOpen} setMainName={setMainName} />
+      <ModalBasic setModalOpen={setModalOpen} />
     </>
   );
 };
