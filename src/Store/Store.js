@@ -121,7 +121,9 @@ const TableData = ({ apiDatas }) => (
           <p>소제목: {data.nm_sub._cdata}</p>
           <p>번호: {data.tel._cdata}</p>
           <p>타입: {data.type._cdata}</p>
-          <img src={data.list_img._cdata} alt={data.list_img._cdata} />
+          <div>
+            <img src={data.list_img._cdata} alt={data.list_img._cdata} />
+          </div>
         </div>
       );
     })}
