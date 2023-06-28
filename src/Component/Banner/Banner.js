@@ -1,23 +1,17 @@
 import React from "react";
 import "./Banner.css";
 
-const Banner = () => {
+export const Banner = () => {
   return (
     <div className="firstBox">
-      <div className="firstBlueBox">
-        <img src="./blue.png" alt="" />
-      </div>
-      <div className="firstRedBox">
-        <img src="./pink.png" alt="" />
-      </div>
-      <div className="firstBoxSecondText">
-        <img src="./image 2.png" alt="" />
-      </div>
-      <div className="firstBoxFirstText">
-        <p>WELCOME TO CHUNGCHEONGNAM-DO</p>
-      </div>
+      <img src="./img/pink.png" alt="img1p" className="pink11" />
+      <img src="./img/blue.png" alt="img1b" className="blue11" />
+      <img src="./img/image 2.png" alt="imgcw" className="cw" />
+      <p className="fp">
+        WELCOME TO
+        <br />
+        CHUNGCHEONGNAM-DO
+      </p>
     </div>
   );
 };
-
-export default Banner;

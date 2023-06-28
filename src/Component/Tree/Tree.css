@@ -1,0 +1,10 @@
+.city {
+}
+
+.city:hover {
+  cursor: pointer;
+}
+
+.treeText {
+  pointer-events: none;
+}

@@ -1,0 +1,24 @@
+/* 메인배경 */
+.Main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: #c91558;
+}
+
+.Backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.701);
+  z-index: 4;
+}
+
+.carouselBox {
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+}

@@ -1,0 +1,37 @@
+/* 지역 축제 설명 텍스트 */
+.postExplain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 50px 40px;
+  width: 30vw;
+  box-sizing: border-box;
+}
+
+.mainExplain {
+  font-family: Zen Dots;
+  color: #f0f0f0;
+  font-size: 50px;
+  text-align: left;
+  white-space: pre-line;
+}
+
+.subExplain {
+  color: #f0f0f0;
+  font-size: 25px;
+  text-align: left;
+}
+
+.linkButton {
+  padding: 30px;
+
+  background-color: #d9d9d9;
+  border-radius: 30px;
+
+  font-size: 25px;
+}
+
+.linkButton {
+  text-decoration: none;
+}
