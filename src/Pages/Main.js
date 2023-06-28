@@ -1,14 +1,22 @@
 import React from "react";
 import { Banner } from "../Component/Banner/Banner";
 import Article from "../Component/Article/Article";
-import { Box, BoxTypeTwo, BoxTypeThree, BoxTypeFour, LastBox, BoxTypeFive } from "../Component/Boxs/Boxs";
+import {
+  Box,
+  BoxTypeTwo,
+  BoxTypeFour,
+  LastBox,
+  BoxTypeFive,
+  BackGroundBox,
+  AnimationBox,
+} from "../Component/Boxs/Boxs";
 import { SpecialBox } from "../Component/SpecialBox/SpecialBox";
 import Section from "../Component/Section/Section";
 
 export const Main = () => {
   return (
     <Section>
-      <Banner></Banner>
+      <Banner />
       <Article>
         <Box size="36vw" url="mud" height="36vw">
           <p>
@@ -19,22 +27,26 @@ export const Main = () => {
             FESTIVAL
           </p>
         </Box>
-        <Box size="64vw" url="apple" height="36vw">
-          <p>
-            YESAN
-            <br />
-            APPLE
-          </p>
-        </Box>
+        <BackGroundBox url="">
+          <AnimationBox size="64vw" url="apple" height="36vw" dire="left">
+            <p>
+              YESAN
+              <br />
+              APPLE
+            </p>
+          </AnimationBox>
+        </BackGroundBox>
       </Article>
       <Article>
-        <Box size="64vw" url="fire" height="30vw">
-          <p>
-            2023 PINNACLE LAND
-            <br />
-            FIREWORKS FESTIVAL
-          </p>
-        </Box>
+        <BackGroundBox url="">
+          <AnimationBox size="64vw" url="fire" height="30vw" dire="right">
+            <p>
+              2023 PINNACLE LAND
+              <br />
+              FIREWORKS FESTIVAL
+            </p>
+          </AnimationBox>
+        </BackGroundBox>
         <Box size="36vw" url="green" height="30vw">
           <p>
             GEUMSAN <br />
@@ -52,13 +64,15 @@ export const Main = () => {
         </Box>
       </Article>
       <Article>
-        <BoxTypeThree size="70vw" url="배" height="32vw">
-          <p>
-            CHEONAN
-            <br />
-            PEAR
-          </p>
-        </BoxTypeThree>
+        <BackGroundBox url="">
+          <AnimationBox size="70vw" url="배" height="32vw" dire="left">
+            <p>
+              CHEONAN
+              <br />
+              PEAR
+            </p>
+          </AnimationBox>
+        </BackGroundBox>
         <BoxTypeTwo size="30vw" url="Rectangle 32" height="32vw" right="5%">
           <p>
             Local
@@ -71,11 +85,7 @@ export const Main = () => {
       </Article>
       <Article>
         <BoxTypeTwo size="30vw" url="pink22" height="36vw" right="65%">
-          <p>
-            Festival
-            <br />
-            of the Month
-          </p>
+          <p>Festival of the Month</p>
         </BoxTypeTwo>
         <BoxTypeFour size="70vw" url="boryeong" height="36vw" />
       </Article>

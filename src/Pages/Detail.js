@@ -28,7 +28,7 @@ const Detail = () => {
       <div style={{ display: "flex", flex: "1 0 auto" }}>
         {showFest ? <ExplainFest /> : <ExplainFood />}
         <div className="carouselBox">
-          <Carousel cards={cards} height="500px" width="30%" margin="0 auto" offset={2} showArrows={false} />
+          <Carousel cards={cards} height="50%" width="40%" margin="0 auto" offset={2} showArrows={false} />
         </div>
       </div>
     </div>
