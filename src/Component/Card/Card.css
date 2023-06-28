@@ -1,13 +1,17 @@
 .card {
-  width: 35vw;
-  max-width: 850px;
+  width: 30vw;
+  height: 20vw;
   border-radius: 20px;
   margin-top: -20%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.card img {
-  object-fit: cover;
+.cardImg {
+  background-color: aliceblue;
   border-radius: 20px;
-  width: 100%;
+  width: 35vw;
   height: 100%;
+  object-fit: fill;
 }

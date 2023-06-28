@@ -70,7 +70,7 @@ export const BoxTypeTwo = (props) => {
         trigger: boxElement,
         start: "top 70%", // 이미지가 사라지기 시작할 스크롤 위치
         // end: "bottom 20%", // 이미지가 완전히 사라질 스크롤 위치
-        scrub: true, // 스크롤 방향에 따라 애니메이션을 전환
+        scrub: false, // 스크롤 방향에 따라 애니메이션을 전환
       },
     });
   }, []);

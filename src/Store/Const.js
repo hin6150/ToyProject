@@ -169,24 +169,22 @@ export const areasEnglish = [
 export const cards = [
   {
     key: uuidv4(),
-    content: <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/convertplus_thumbnail.jpg" />,
+    content: <Card imagen="http://tour.chungnam.go.kr/Upl/kr/tourist/thm_2017-ca-001-01.jpg" />,
   },
   {
     key: uuidv4(),
-    content: <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/acf_pro.png" />,
+    content: <Card imagen="http://tour.chungnam.go.kr/Upl/kr/tourist/thm_tourist_0_1424782678.jpg" />,
   },
   {
     key: uuidv4(),
-    content: (
-      <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2017/12/layer_slider_plugin_thumb.png" />
-    ),
+    content: <Card imagen="http://tour.chungnam.go.kr/Upl/kr/tourist/thm_tourist_0_1424782610.jpg" />,
   },
   {
     key: uuidv4(),
-    content: <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2016/08/slider_revolution-1.png" />,
+    content: <Card imagen="http://tour.chungnam.go.kr/Upl/kr/tourist/thm_tourist_0_1424782499.jpg" />,
   },
   {
     key: uuidv4(),
-    content: <Card imagen="https://updates.theme-fusion.com/wp-content/uploads/2019/01/pwa_880_660.jpg" />,
+    content: <Card imagen="http://tour.chungnam.go.kr/Upl/kr/tourist/thm_tourist_0_1424961954.jpg" />,
   },
 ];

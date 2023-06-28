@@ -11,12 +11,13 @@ function Card({ imagen }) {
   });
   return (
     <animated.div
+      style={{ ...props3, backgroundImage: `url('${imagen}')` }}
       className="card"
-      style={props3}
+      // style={props3}
       onMouseEnter={() => setShown(true)}
       onMouseLeave={() => setShown(false)}
     >
-      <img src={imagen} alt="" className="cardImg" />
+      {/* <img src={imagen} alt="" className="cardImg" /> */}
     </animated.div>
   );
 }

@@ -112,19 +112,6 @@
 }
 
 .LastBox {
-  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  margin: 150px 0;
-}
-.LastBox img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
-  height: 100%;
+  margin-top: 150px;
 }
