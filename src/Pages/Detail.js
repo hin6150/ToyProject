@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Sidebar } from "../Component/Sidebar/Sidebar";
-import { ExplainFest, ExplainFood } from "../Component/Explain/explain";
+import { ExplainFest, ExplainFest2, ExplainFood } from "../Component/Explain/explain";
 import Header from "../Component/Header/Header";
 import ChangePoster from "../Component/ChangePoster/ChangePoster";
 import "./Detail.css";
@@ -17,6 +17,7 @@ const Detail = () => {
   const [showFest, setShowFest] = useState(true);
   const [modalOpen, setModalOpen] = useState(false);
   const [mainName, setMainName] = useState("보령");
+
   const [isLoading, setIsLoading] = useState(false);
 
   const [filteredDataList, setFilteredDataList] = useState([]);
@@ -39,17 +40,17 @@ const Detail = () => {
       const filteredList = dataList.filter((data) => data.local_nm === localNmToFilter);
       setFilteredDataList(filteredList);
 
-      setFilteredCard((prev) => [...prev]);
+      // setFilteredCard((prev) => [...prev]);
 
-      dataList.slice(0, 5).map((data) => {
-        const newData = {
-          key: uuidv4(),
-          content: <Card imagen={data.list_img} />,
-        };
-        setFilteredCard((prev) => [...prev, newData]);
-      });
+      // dataList.slice(0, 5).map((data) => {
+      //   const newData = {
+      //     key: uuidv4(),
+      //     content: <Card imagen={data.list_img} />,
+      //   };
+      //   setFilteredCard((prev) => [...prev, newData]);
+      // });
     } finally {
-      console.log("findData: ", filteredDataList);
+      console.log(`findData ${areas[mainName]}:`, filteredDataList);
 
       setIsLoading(false);
     }
@@ -61,23 +62,15 @@ const Detail = () => {
 
   return (
     <div className="Main">
-      {isLoading ? (
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-          <p style={{ fontSize: "36px", color: "white" }}>데이터가 없습니다.</p>
+      {modalOpen && <Sidebar setModalOpen={setModalOpen} />}
+      <Header mainName={areasEnglish[mainName]} setModalOpen={setModalOpen} />
+      <ChangePoster setShowFest={setShowFest} />
+      <div style={{ display: "flex", flex: "1 0 auto" }}>
+        {showFest ? <ExplainFest /> : <ExplainFest2 />}
+        <div className="carouselBox">
+          <Carousel cards={cards} height="50%" width="60%" margin="0 auto" offset={2} showArrows={false} />
         </div>
-      ) : (
-        <>
-          {modalOpen && <Sidebar setModalOpen={setModalOpen} />}
-          <Header mainName={areasEnglish[mainName]} setModalOpen={setModalOpen} />
-          <ChangePoster setShowFest={setShowFest} />
-          <div style={{ display: "flex", flex: "1 0 auto" }}>
-            {showFest ? <ExplainFest data={dataList[0]} /> : <ExplainFest data={dataList[1]} />}
-            <div className="carouselBox">
-              <Carousel cards={cards} height="50%" width="60%" margin="0 auto" offset={2} showArrows={false} />
-            </div>
-          </div>
-        </>
-      )}
+      </div>
     </div>
   );
 };

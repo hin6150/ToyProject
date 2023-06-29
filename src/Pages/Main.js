@@ -19,18 +19,18 @@ import { DataContext } from "../Store/ContextApi";
 export const Main = () => {
   const { addData } = useContext(DataContext);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const API_URL = `/_prog/openapi/?func=tour&start=1&end=480`;
-      const { data } = await axios.get(API_URL);
-      const result = convert.xml2js(data, { compact: true, spaces: 4 });
-      console.log(result.item_info.item);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const API_URL = `/_prog/openapi/?func=tour&start=1&end=480`;
+  //     const { data } = await axios.get(API_URL);
+  //     const result = convert.xml2js(data, { compact: true, spaces: 4 });
+  //     console.log(result.item_info.item);
 
-      addData(result.item_info.item);
-    };
-    console.log("fetchData");
-    fetchData();
-  }, []);
+  //     addData(result.item_info.item);
+  //   };
+  //   console.log("fetchData");
+  //   fetchData();
+  // }, []);
 
   return (
     <Section>
