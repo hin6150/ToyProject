@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Banner } from "../Component/Banner/Banner";
 import Article from "../Component/Article/Article";
 import {
@@ -12,8 +12,26 @@ import {
 } from "../Component/Boxs/Boxs";
 import { SpecialBox } from "../Component/SpecialBox/SpecialBox";
 import Section from "../Component/Section/Section";
+import axios from "axios";
+import convert from "xml-js";
+import { DataContext } from "../Store/ContextApi";
 
 export const Main = () => {
+  const { addData } = useContext(DataContext);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const API_URL = `/_prog/openapi/?func=tour&start=1&end=480`;
+      const { data } = await axios.get(API_URL);
+      const result = convert.xml2js(data, { compact: true, spaces: 4 });
+      console.log(result.item_info.item);
+
+      addData(result.item_info.item);
+    };
+    console.log("fetchData");
+    fetchData();
+  }, []);
+
   return (
     <Section>
       <Banner />

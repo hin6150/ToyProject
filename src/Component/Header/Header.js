@@ -10,7 +10,7 @@ const Header = ({ mainName, setModalOpen }) => {
         <Link to={"/"}>
           <MdHome className="homeButton">홈</MdHome>
         </Link>
-        <h1 className="mainName">{mainName}</h1>
+        <h1 className="mainName">{mainName + "-Si"}</h1>
         <MdDensityMedium className="navIcon" onClick={() => setModalOpen(true)}>
           모달 띄우기
         </MdDensityMedium>

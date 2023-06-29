@@ -27,7 +27,7 @@ const Tree = ({ ...props }) => {
           <path
             key={index}
             className="city"
-            onClick={() => navigate(`/detail/${areasEnglish[index]}`)}
+            onClick={() => navigate(`/detail/${index}`)}
             d={data.d}
             fill={data.fill}
             stroke={hoveredPaths.includes(index) ? "white" : "none"}

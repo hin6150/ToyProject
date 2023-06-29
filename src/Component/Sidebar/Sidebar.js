@@ -11,7 +11,7 @@ function ModalBasic({ setModalOpen }) {
   };
 
   const handleAreaClick = (index) => {
-    navigate(`/detail/${areasEnglish[index]}`);
+    navigate(`/detail/${index}`);
     setModalOpen(false);
   };
 

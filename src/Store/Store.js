@@ -1,17 +1,29 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import convert from "xml-js";
+import { DataContext } from "./ContextApi";
+import { useNavigate } from "react-router-dom/dist";
 
 const Store = () => {
+  const navigator = useNavigate();
+
+  const [apiDatas, setApiDatas] = useState([]);
+  const [theme, setTheme] = useState([{ festival: true }, { tour: false }, { specialty: false }]);
+  const [startIndex, setStartIndex] = useState(1);
+  const [endIndex, setEndIndex] = useState(20);
+  const [isLoading, setIsLoading] = useState(false);
+  const { addData, dataList } = useContext(DataContext);
+
   async function getAllValue() {
-    const selectedTheme = findTrueAttribute();
-    const API_URL = `/_prog/openapi/?func=${selectedTheme}&start=${startIndex}&end=${endIndex}`;
-    const { data } = await axios.get(API_URL);
-    const result = convert.xml2js(data, { compact: true, spaces: 4 });
-    // newData[theme] = result.item_info.item;
-    // console.log(result.item_info.item);
-    setApiDatas(result.item_info.item);
-    // return result.item_info.item;
+    try {
+      const selectedTheme = findTrueAttribute();
+      const API_URL = `/_prog/openapi/?func=${selectedTheme}&start=${startIndex}&end=${endIndex}`;
+      const { data } = await axios.get(API_URL);
+      const result = convert.xml2js(data, { compact: true, spaces: 4 });
+      setApiDatas(result.item_info.item);
+    } finally {
+      setIsLoading(false);
+    }
   }
   async function getTotalCnt() {
     const selectedTheme = findTrueAttribute();
@@ -29,11 +41,6 @@ const Store = () => {
     return trueAttribute ? Object.keys(trueAttribute)[0] : null;
   };
 
-  const [apiDatas, setApiDatas] = useState([]);
-  const [theme, setTheme] = useState([{ festival: true }, { tour: false }, { specialty: false }]);
-  const [startIndex, setStartIndex] = useState(10);
-  const [endIndex, setEndIndex] = useState(20);
-
   const handleStartIndexChange = (e) => {
     setStartIndex(Number(e.target.value));
   };
@@ -42,9 +49,29 @@ const Store = () => {
     setEndIndex(Number(e.target.value));
   };
 
-  const handleSave = () => {};
+  const handleSave = () => {
+    let index = 0;
+    apiDatas.map((data) => {
+      const newData = {
+        addr: data.addr._cdata,
+        desc: data.desc._cdata,
+        h_url: data.h_url._cdata,
+        local_nm: data.local_nm._cdata,
+        mng_no: data.mng_no._cdata,
+        nm: data.nm._cdata,
+        nm_sub: data.nm_sub._cdata,
+        tel: data.tel._cdata,
+        type: data.type._cdata,
+        list_img: data.list_img._cdata,
+      };
+      addData(newData);
+      index++;
+    });
+    alert("Saved " + index);
+  };
 
   const handleClick = async () => {
+    setIsLoading(true);
     try {
       const selectedTheme = findTrueAttribute();
       const length = await getTotalCnt(selectedTheme);
@@ -61,6 +88,14 @@ const Store = () => {
   };
   return (
     <div>
+      <button
+        onClick={() => {
+          navigator("/");
+        }}
+      >
+        홈으로
+      </button>
+
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-around", padding: "20px 0" }}>
         <label>
           Start Index:
@@ -71,7 +106,9 @@ const Store = () => {
           <input type="number" value={endIndex} onChange={handleEndIndexChange} />
         </label>
         <RadioGroup theme={theme} setTheme={setTheme} />
-        <button onClick={handleClick}>조회하기</button>
+        <button onClick={handleClick} disabled={isLoading}>
+          {isLoading ? "불러오는 중" : "조회하기"}
+        </button>
         <button onClick={handleSave}>저장하기</button>
       </div>
       <TableData apiDatas={apiDatas} />
@@ -102,30 +139,32 @@ const RadioGroup = ({ theme, setTheme }) => {
   );
 };
 
-const TableData = ({ apiDatas }) => (
-  <>
-    {apiDatas.map((data, index) => {
-      return (
-        <div style={{ display: "flex", flexDirection: "column", gap: "10px" }} key={index}>
-          <p>{index}번 데이터</p>
-          <p>주소: {data.addr._cdata}</p>
-          <div dangerouslySetInnerHTML={{ __html: data.desc._cdata }}></div>
-          <p style={{ wordBreak: "break-all" }}>URL: {data.h_url._cdata}</p>
-          <p>
-            좌표:
-            {data.lat._cdata} {data.lng._cdata}
-          </p>
-          <p>위치: {data.local_nm._cdata}</p>
-          <p>번호: {data.mng_no._cdata}</p>
-          <p>제목: {data.nm._cdata}</p>
-          <p>소제목: {data.nm_sub._cdata}</p>
-          <p>번호: {data.tel._cdata}</p>
-          <p>타입: {data.type._cdata}</p>
-          <div>
-            <img src={data.list_img._cdata} alt={data.list_img._cdata} />
+const TableData = ({ apiDatas }) => {
+  return (
+    <>
+      {apiDatas.map((data, index) => {
+        return (
+          <div style={{ display: "flex", flexDirection: "column", gap: "10px" }} key={index}>
+            <p>{index}번 데이터</p>
+            <p>주소: {data.addr._cdata}</p>
+            <div dangerouslySetInnerHTML={{ __html: data.desc._cdata }}></div>
+            <p style={{ wordBreak: "break-all" }}>URL: {data.h_url._cdata}</p>
+            <p>
+              좌표:
+              {data.lat._cdata} {data.lng._cdata}
+            </p>
+            <p>위치: {data.local_nm._cdata}</p>
+            <p>번호: {data.mng_no._cdata}</p>
+            <p>제목: {data.nm._cdata}</p>
+            <p>소제목: {data.nm_sub._cdata}</p>
+            <p>번호: {data.tel._cdata}</p>
+            <p>타입: {data.type._cdata}</p>
+            <div>
+              <img src={data.list_img._cdata} alt={data.list_img._cdata} />
+            </div>
           </div>
-        </div>
-      );
-    })}
-  </>
-);
+        );
+      })}
+    </>
+  );
+};
