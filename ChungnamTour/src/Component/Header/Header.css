@@ -1,0 +1,39 @@
+/* 헤더 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+hr {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 지역 이름 */
+.mainName {
+  font-family: Zen Dots;
+  font-size: 50px;
+  color: #f0f0f0;
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* 홈 버튼 */
+.homeButton {
+  color: #f0f0f0;
+  font-size: 40px;
+  padding: 20px 0px 20px 40px;
+}
+
+/* 지역 선택 버튼 */
+.navIcon {
+  color: #f0f0f0;
+  font-size: 30px;
+  padding: 20px 40px 20px 0px;
+}
+.navIcon:hover {
+  cursor: pointer;
+}

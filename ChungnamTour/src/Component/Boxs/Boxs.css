@@ -1,0 +1,117 @@
+.Box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: black;
+}
+.Box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.BoxText {
+  position: absolute;
+  right: 0;
+  left: 0;
+  text-align: center;
+
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4vw;
+
+  color: #ffffff;
+}
+
+.BoxTypeTwo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.BoxTypeTwo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.BoxTypeTwoText {
+  position: absolute;
+  writing-mode: vertical-rl;
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4vw;
+
+  color: #ffffff;
+}
+
+.BoxTypeFour {
+  position: relative;
+  display: flex;
+  background-color: black;
+}
+.BoxTypeFour img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.BoxTypeFourTextOne {
+  position: absolute;
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4vw;
+
+  color: #ffffff;
+
+  top: 10%;
+  left: 5%;
+  line-height: 1.5;
+}
+
+.BoxTypeFourTextTwo {
+  position: absolute;
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 2vw;
+
+  color: #ffffff;
+
+  top: 78%;
+  left: 78%;
+  line-height: 1.2;
+}
+
+.BoxTypeFourTextThree {
+  position: absolute;
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2vw;
+
+  color: #ffffff;
+
+  top: 5%;
+  left: 85%;
+  line-height: 1.2;
+  writing-mode: vertical-rl;
+}
+
+.BoxTypeFive {
+  position: relative;
+  display: flex;
+  background-color: black;
+}
+.BoxTypeFive img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.LastBox {
+  display: flex;
+  margin-top: 150px;
+}

@@ -1,0 +1,39 @@
+.OutBox {
+  position: relative;
+  background-color: black;
+  width: 64vw;
+  height: 48vw;
+  display: flex;
+  justify-content: center;
+}
+.InnerBox {
+  object-fit: cover;
+  width: 42vw;
+  height: 36vw;
+}
+.InnerBox img {
+  width: 100%;
+  height: 100%;
+}
+.BottomP {
+  position: absolute;
+  margin-top: 5%;
+  color: #ffffff;
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4vw;
+}
+.rotate-paragraph {
+  position: absolute;
+  writing-mode: vertical-rl;
+
+  left: 5%;
+  top: 15%;
+
+  color: #ffffff;
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4vw;
+}

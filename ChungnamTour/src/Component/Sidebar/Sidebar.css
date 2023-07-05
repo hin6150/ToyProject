@@ -1,0 +1,56 @@
+/* 모달창 전체 */
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20vw;
+  min-width: 300px;
+  height: 100vh;
+  background-color: white;
+  z-index: 5;
+}
+
+/* 모달창 이름 */
+.modalTop {
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+  background-color: black;
+}
+
+.modalexit {
+  font-size: 30px;
+  color: white;
+
+  padding: 20px 5px 10px 5px;
+  margin: 10px;
+}
+
+.modalexit:hover {
+  cursor: pointer;
+}
+
+/* 모달창 리스트 */
+
+.area {
+  font-size: 25px;
+  padding: 15px;
+}
+
+.areaList {
+  overflow-y: scroll;
+  height: 90vh;
+
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+
+.areaList::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+.area:hover {
+  background-color: rgb(40, 40, 40);
+  color: white;
+  cursor: pointer;
+}

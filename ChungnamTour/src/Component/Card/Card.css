@@ -1,0 +1,17 @@
+.card {
+  width: 30vw;
+  height: 20vw;
+  border-radius: 20px;
+  margin-top: -20%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cardImg {
+  background-color: aliceblue;
+  border-radius: 20px;
+  width: 35vw;
+  height: 100%;
+  object-fit: fill;
+}

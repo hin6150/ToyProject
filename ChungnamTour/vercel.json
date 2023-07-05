@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/_prog/openapi/(.*)",
+      "destination": "https://tour.chungnam.go.kr/_prog/openapi/$1"
+    }
+  ]
+}
