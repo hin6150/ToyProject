@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "GmarketSansMedium";
+}
+
+.OUTLINE {
+  stroke-linejoin: round;
+  stroke: #fed9b7;
+  stroke-width: 4;
+  fill: #fdfcdc;
+}
+
+.OUTLINE:hover {
+  fill: #f07167;
+  transition: transform 1s, fill 1s;
+
+  transform-origin: center center;
+  transform-box: fill-box;
+  transform: scale(1.13);
+  -ms-transform: scale(1.13);
+  -webkit-transform: scale(1.13);
+}
+
+.small:hover {
+  transition: transform 1s;
+  transform-origin: center center;
+  transform-box: fill-box;
+  transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+}
+path {
+  fill: #fed9b7;
+}
+path:hover {
+  cursor: pointer;
+  fill: #eee;
+}
+.TEXT {
+  fill: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  text-anchor: middle;
+  pointer-events: none;
+}

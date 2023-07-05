@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "GmarketSansMedium";
+}
+
+.modal-background {
+  /* 화면에 꽉 차게 하는 코드 */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.55);
+  /* 검정 도화지로 덮어 씌우기 */
+  z-index: 10;
+
+  display: none;
+}
+
+.card {
+  width: 40%;
+  max-width: 400px; /*특정 크기 이상 늘어나지 않도록*/
+  background-color: #eee;
+  position: fixed;
+  top: 100px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.card-title {
+  display: flex; /*텍스트 한줄 정렬*/
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+  font-weight: bold;
+}
+
+.card-close-btn:hover {
+  cursor: pointer; /*hover시 커서가 손모양으로 바뀜*/
+}
+
+.festival-contents {
+  position: relative;
+  margin: 0px 15px 20px;
+  height: 80%;
+}
+
+.festival-contents img {
+  /*축제 사진*/
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 10px;
+}
+
+.festival-contents img:hover ~ .card-contents {
+  /*~은 왼쪽 요소를 hover했을 때 오른쪽 요소에 css를 부여*/
+  visibility: visible;
+}
+.festival-contents a {
+  color: white;
+  text-decoration: underline;
+}
+.card-contents {
+  opacity: 0%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 13px;
+}
+
+.card-contents:hover {
+  opacity: 95%;
+  transition: 0.75s;
+}
+
+.card-contents p {
+  margin: 6px 20px; /*위, 아래 / 왼쪽 오른쪽*/
+}
+
+.card-contents a {
+  margin: 6px 20px; /*위, 아래 / 왼쪽 오른쪽*/
+  width: fit-content;
+  right: 0;
+  left: 0;
+  margin: auto;
+}

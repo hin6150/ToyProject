@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ignore div when clicking on image</title>
+    <script>
+      window.onload = function () {
+        var image = document.getElementById("my-image");
+        var ignoreDiv = document.getElementById("ignore-div");
+        image.onclick = function () {
+          window.location.href = "http://www.example.com"; // 다른 페이지로 이동
+        };
+        ignoreDiv.onclick = function (e) {
+          e.stopPropagation(); // 클릭 이벤트 전파 방지
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <div id="ignore-div">
+      <p>이 div를 클릭하면 이미지 클릭 이벤트가 발생하지 않습니다.</p>
+    </div>
+    <img id="my-image" src="image.png" />
+  </body>
+</html>

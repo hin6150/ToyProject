@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <d>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Reset Css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+
+    <!-- Nanum Gothic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Material Icons-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" href="css/startPage.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+    <link rel="stylesheet" href="./css/carousel.css" />
+    <link rel="stylesheet" href="./css/searchPage.css" />
+
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=18eadbd2f84da8f45a7a5b98e31cb824&libraries=services"
+    ></script>
+    <script defer src="./js/startPage.js"></script>
+    <script defer src="./js/map.js"></script>
+    <script defer type="module" src="./js/modal.js"></script>
+    <script defer type="module" src="./js/carousel.js"></script>
+    <script defer type="module" src="./js/search.js"></script>
+    <script defer src="./js/main.js"></script>
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=18eadbd2f84da8f45a7a5b98e31cb824"
+    ></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./img/logo/logo.png" />
+    <!--아이콘 적용-->
+
+    <title>Holi - Festival</title>
+  </d>
+  <body class="stop-scrolling">
+    <div class="start-page">
+      <button class="participation-btn">축제 참여하기</button>
+      <img src="" alt="train" class="train" />
+      <div class="start-page-background">
+        <ul class="outside-view">
+          <li class="outside-img">
+            <img src="" alt="outside1" />
+          </li>
+          <li class="outside-img">
+            <img src="" alt="outside2" />
+          </li>
+          <li class="outside-img">
+            <img src="" alt="outside3" loading="lazy" />
+          </li>
+        </ul>
+      </div>
+      <audio class="audio">
+        <source src="./audio/train railroad.mp3" type="audio/mp3" />
+      </audio>
+    </div>
+
+    <div id="overlay" class="modal-background"></div>
+    <header>
+      <div class="inner">
+        <div class="nav">
+          <a href="http://127.0.0.1:5500" target="">
+            <img
+              class="main-logo"
+              src="./img/logo/logo2.png"
+              alt="main-logo"
+              onclick="pageRefresh()"
+            />
+          </a>
+          <div class="flex-center">
+            <p class="nav-click" value="Seoul">서울</p>
+
+            <div class="wrapper">
+              <p class="nav-action action-1">수도권</p>
+              <div class="nav-area area-1">
+                <p class="nav-click" value="Gyeonggi">경기도</p>
+                <p class="nav-click" value="Incheon">인천광역시</p>
+              </div>
+            </div>
+
+            <p class="nav-click" value="Gangwon">강원도</p>
+
+            <div class="wrapper">
+              <p class="nav-action action-2">충청도</p>
+              <div class="nav-area area-2">
+                <p class="nav-click" value="North_Chungcheong">충청북도</p>
+                <p class="nav-click" value="South_Chungcheong">충청남도</p>
+                <p class="nav-click" value="Sejong">세종특별시</p>
+                <p class="nav-click" value="Daejeon">대전광역시</p>
+              </div>
+            </div>
+
+            <div class="wrapper">
+              <p class="nav-action action-3">전라도</p>
+              <div class="nav-area area-3">
+                <p class="nav-click" value="North_Jeolla">전라북도</p>
+                <p class="nav-click" value="South_Jeolla">전라남도</p>
+                <p class="nav-click" value="Gwangju">광주광역시</p>
+              </div>
+            </div>
+
+            <div class="wrapper">
+              <p class="nav-action action-4">경상도</p>
+              <div class="nav-area area-4">
+                <p class="nav-click" value="North_Gyeongsang">경상북도</p>
+                <p class="nav-click" value="South_Gyeongsang">경상남도</p>
+                <p class="nav-click" value="Daegu">대구광역시</p>
+                <p class="nav-click" value="Ulsan">울산광역시</p>
+                <p class="nav-click" value="Busan">부산광역시</p>
+              </div>
+            </div>
+
+            <p class="nav-click" value="Jeju">제주도</p>
+          </div>
+          <div class="search">
+            <input type="text" id="searchInput" />
+            <span class="material-symbols-outlined material-icons">
+              search
+            </span>
+          </div>
+          <div class="menu">
+            <span class="material-symbols-outlined material-icons"> menu </span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="searchBox" id="searchBox">
+      <!--r검색 시에 나오는 화면-->
+      <!-- <div id="scroll-indicator">
+        <img
+          src="./img/icon/train-icon2.png"
+          alt="train-icon"
+          id="scroll-indicator-img"
+        />
+      </div> -->
+      <!--상태표시바-->
+      <div class="searchContainer" id="searchContainer">
+        <div class="searchContainerImg"></div>
+        <!--상세페이지 이미지-->
+        <div class="searchContainerIns"></div>
+        <!--상세페이지 서명-->
+        <div id="searchContainerMap"></div>
+        <!--상세페이지 지도-->
+        <span id="searchSpanCloseBtn">X</span>
+        <div id="kakaoMap"></div>
+      </div>
+    </div>
+    <section>
+      <div class="right-menu">
+        <div class="top">
+          <p>지역별 축제 보기</p>
+          <span class="material-symbols-outlined material-icons close-btn">
+            close
+          </span>
+        </div>
+        <div class="content">
+          <ul>
+            <li value="Seoul">서울</li>
+            <li value="Gyeonggi">경기</li>
+            <li value="Incheon">인천</li>
+            <li value="Gangwon">강원</li>
+            <li value="South_Chungcheong">충남</li>
+            <li value="North_Chungcheong">충북</li>
+            <li value="Sejong">세종</li>
+            <li value="Daejeon">대전</li>
+            <li value="South_Jeolla">전남</li>
+            <li value="North_Jeolla">전북</li>
+            <li value="Gwangju">광주</li>
+            <li value="South_Gyeongsang">경남</li>
+            <li value="North_Gyeongsang">경북</li>
+            <li value="Daegu">대구</li>
+            <li value="Ulsan">울산</li>
+            <li value="Busan">부산</li>
+            <li value="Jeju">제주</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 지도 시작 -->
+    <object type="image/svg+xml" data="./map.svg" class="map" id="map"></object>
+    <!-- 지도 종료 -->
+
+    <!--캐러셀 시작-->
+    <div class="carousel" style="display: none"></div>
+    <!--캐러셀 종료-->
+    <footer>
+      <div class="inner">
+        <div class="container flex-center">
+          <!-- 팀원 정보 시작 -->
+          <div class="info flex-start">
+            <div class="leader flex-center">
+              <!-- <h2>팀장</h2>
+              <p>신홍기</p>
+              <p>hin6150@gmail.com</p> -->
+            </div>
+            <div class="crew-tab flex-start">
+              <!-- <div><h2>팀원</h2></div> -->
+              <div class="crew-info flex-start" style="margin-bottom: 10px">
+                <div class="crew flex-center">
+                  <p>이서현</p>
+                  <p>uimi7625@naver.com</p>
+                </div>
+                <div class="crew flex-center">
+                  <p>김재연</p>
+                  <p>bigpidture@kangnam.ac.kr</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 팀원 정보 종료 -->
+          <hr />
+          <!-- 로고 시작 -->
+          <div class="logo-img flex-center">
+            <img
+              src="./img/logo/LikeLion.png"
+              alt="LikeLionLogo"
+              loading="lazy"
+            />
+            <span class="material-symbols-outlined material-icons">
+              close
+            </span>
+            <img
+              src="./img/logo/KangNam.png"
+              alt="KangNamLogo"
+              loading="lazy"
+            />
+          </div>
+          <p>ⓒ 2023 LIKELION KANGNAM. All Rights Reserved.</p>
+          <!-- 로고 종료 -->
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

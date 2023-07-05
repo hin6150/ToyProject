@@ -1,0 +1,97 @@
+@font-face {
+  /*넥슨 Lv.2 고딕*/
+  font-family: "NEXON Lv2 Gothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.start-page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.participation-btn {
+  /* 축제 참여하기 버튼 */
+  z-index: 40;
+  width: 130px;
+  height: 55px;
+  border-radius: 20px;
+  top: 80%; /* 수직 정 가운데 위치 */
+  left: 50%; /* 수평 정 가운데 위치 */
+  transform: translate(-50%, -50%); /* 위치 중심으로 이동 */
+  position: fixed;
+  opacity: 1; /* 처음에는 보이도록 설정 */
+  transition: opacity 0.5s ease-in-out; /* 부드럽게 페이드아웃 되도록 설정 */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  background-color: aliceblue;
+  color: #1e6b7b;
+  border: 3px solid aliceblue;
+  font-family: "NEXON Lv2 Gothic";
+  font-weight: 200px;
+  font-size: 0.9vw; /*뷰포트 너비의 4%에 해당하는 크기로 글꼴 크기를 조정*/
+  cursor: pointer;
+}
+.participation-btn:hover {
+  background-color: #1e6b7b;
+  color: #fff;
+}
+
+.train {
+  position: fixed;
+  z-index: 30;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  /*반응형*/
+  .train {
+    object-fit: cover;
+  }
+}
+
+.start-page-background {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh; /* 창의 높이와 같게 설정 */
+}
+
+.outside-view {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  transition: transform 0.5s ease-out;
+  z-index: 20;
+}
+
+.outside-view li {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 20;
+}
+
+.outside-view li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.stop-scrolling {
+  /*스크롤 막기*/
+  height: 1080px;
+  overflow: hidden;
+}

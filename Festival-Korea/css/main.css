@@ -1,0 +1,360 @@
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "GmarketSansMedium";
+}
+
+body {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Nanum Gothic", "Yu Gothic", sans-serif;
+  line-height: 1.4;
+  text-align: center;
+}
+
+img {
+  display: block;
+  height: 60px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-logo {
+  width: 170px;
+  height: 80px;
+}
+
+.main-logo:hover {
+  cursor: pointer;
+}
+
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* flex 가운데 정렬 */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* flex 수직 정렬 */
+.flex-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* flex 우측 정렬 */
+.flex-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header {
+  --nav-text-width: 80px;
+  z-index: 2;
+  background-color: #0081a7;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  opacity: 0.8;
+}
+
+header .nav {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .nav p {
+  display: flex;
+  width: var(--nav-text-width);
+  height: 100px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  font-family: "GmarketSansMedium";
+}
+
+header .nav p:hover {
+  cursor: pointer;
+  color: #000;
+  font-weight: bold;
+}
+
+header .nav .wrapper {
+  position: relative;
+  width: var(--nav-text-width);
+}
+
+header .nav-action,
+header .nav-click {
+  position: relative;
+}
+
+header .nav-area {
+  position: absolute;
+  background-color: #0081a7;
+  border-radius: 0 0 10px 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: none;
+  padding-bottom: 10px;
+}
+
+header .nav-area p {
+  width: calc(var(--nav-text-width) * 1.5);
+  height: 50px;
+}
+
+header .nav-area p:hover {
+  background-color: #00afb9;
+}
+
+header .nav .search {
+  height: 34px;
+  position: relative;
+}
+
+header .nav .search input {
+  width: 36px;
+  height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  color: #777;
+  transition: width 0.4s;
+  font-size: 12px;
+}
+
+header .nav .search input:focus {
+  width: 180px;
+  border-color: #f07167;
+}
+
+header .nav .search .material-icons {
+  color: #000;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  margin: auto;
+  transition: 0.4s;
+}
+
+header .nav .search.focused .material-icons {
+  opacity: 0;
+}
+
+header .nav .menu {
+  display: none;
+}
+header .nav .menu .material-icons {
+  height: 24px;
+  font-size: 32px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+header .nav .menu .material-icons:hover {
+  color: #000;
+}
+
+section .right-menu {
+  position: fixed;
+  right: 0;
+  background-color: #fff;
+  width: 30%;
+  min-width: 250px;
+  height: 100%;
+  color: #000;
+  z-index: 11;
+  display: none;
+}
+
+section .right-menu .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #0081a7;
+  opacity: 0.8;
+  box-sizing: border-box;
+  height: 100px;
+  color: #fff;
+}
+
+section .right-menu .top .close-btn {
+  cursor: pointer;
+}
+section .right-menu .content ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+section .right-menu .content li {
+  width: 50%;
+  padding: 20px 0;
+}
+section .right-menu .content li:hover {
+  cursor: pointer;
+  background-color: #f07167;
+  color: #fff;
+}
+
+.map {
+  margin-top: 100px;
+  height: 1150px;
+  width: 700px;
+}
+
+.map svg {
+  padding: 20px;
+}
+
+/* footer {
+  background-color: #0081a7;
+  opacity: 0.8;
+  width: 100%;
+  height: 323px;
+} */
+
+footer {
+  background-color: #0081a7;
+  opacity: 0.8;
+  font-family: "GmarketSansMedium";
+  font-weight: 50;
+}
+footer h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 40px;
+}
+footer p {
+  font-size: 16px;
+}
+
+footer .container {
+  flex-direction: column;
+  padding: 20px 0;
+  gap: 20px;
+}
+
+footer .info {
+  flex-direction: column;
+  padding: 10px 0px;
+  gap: 20px;
+}
+
+footer .info .leader {
+  flex-direction: row;
+  gap: 10px;
+}
+
+footer .info .crew-tab {
+  flex-direction: row;
+  gap: 10px;
+}
+
+footer .info .crew-tab .crew-info {
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer .crew-tab .crew {
+  flex-direction: row;
+  gap: 10px;
+}
+
+footer hr {
+  width: 100%;
+  border: 1px solid #fff;
+}
+
+footer .logo-img {
+  flex-direction: row;
+  padding: 0px;
+  gap: 50px;
+  margin-bottom: 36px;
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    --nav-text-width: 70px;
+  }
+
+  .inner {
+    width: 700px;
+  }
+
+  header .nav .flex-center {
+    display: none;
+  }
+
+  header .nav .search input:focus,
+  header .nav .search input {
+    width: 400px;
+    transition: width 0;
+  }
+
+  header .nav .menu {
+    display: block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .inner {
+    width: 400px;
+  }
+  .map {
+    width: 400px;
+    height: auto;
+  }
+
+  header .nav .flex-center {
+    display: none;
+  }
+
+  header .nav .search {
+    position: absolute;
+    right: 44px;
+  }
+
+  header .nav .search .material-icons {
+    color: #fff;
+    cursor: pointer;
+  }
+
+  header .nav .search .material-icons:hover {
+    color: #000;
+  }
+
+  header .nav .search input {
+    background-color: #0081a7;
+    border: none;
+    width: 36px;
+  }
+  header .nav .search input:focus {
+    background-color: #fff;
+    width: 140px;
+  }
+
+  footer .logo-img span {
+    display: none;
+  }
+}
